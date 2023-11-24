@@ -105,6 +105,18 @@
       <DependentUpon>Corporacion.cs</DependentUpon>
     </Compile>
     <Compile Include="DB\PlantaDB.cs" />
+    <Compile Include="Forms\PantallaTabla.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PantallaTabla.Designer.cs">
+      <DependentUpon>PantallaTabla.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PantallaCRUD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\PantallaCRUD.Designer.cs">
+      <DependentUpon>PantallaCRUD.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Inico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,8 +133,17 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Constantes.cs" />
+    <EmbeddedResource Include="Forms\PantallaTabla.resx">
+      <DependentUpon>PantallaTabla.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\PantallaCRUD.resx">
+      <DependentUpon>PantallaCRUD.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\Inico.resx">
       <DependentUpon>Inico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Plantas.resx">
+      <DependentUpon>Plantas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
