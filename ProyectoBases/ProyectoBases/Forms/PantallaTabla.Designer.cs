@@ -32,10 +32,10 @@
             this.label1 = new System.Windows.Forms.Label();
             this.tabla1 = new System.Windows.Forms.DataGridView();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tabla1)).BeginInit();
             this.panel3.SuspendLayout();
@@ -70,6 +70,7 @@
             this.tabla1.RowTemplate.Height = 24;
             this.tabla1.Size = new System.Drawing.Size(552, 486);
             this.tabla1.TabIndex = 0;
+            this.tabla1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla1_CellContentClick);
             // 
             // panel3
             // 
@@ -83,6 +84,17 @@
             this.panel3.Size = new System.Drawing.Size(255, 485);
             this.panel3.TabIndex = 2;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button4.Location = new System.Drawing.Point(60, 57);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(128, 45);
+            this.button4.TabIndex = 3;
+            this.button4.Text = "Actualizar";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -92,6 +104,7 @@
             this.button3.TabIndex = 2;
             this.button3.Text = "Eliminar";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // button2
             // 
@@ -114,17 +127,6 @@
             this.button1.Text = "Insertar";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // button4
-            // 
-            this.button4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(60, 57);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(128, 45);
-            this.button4.TabIndex = 3;
-            this.button4.Text = "Actualizar";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // PantallaTabla
             // 

@@ -134,7 +134,7 @@
             // BtnTipos
             // 
             this.BtnTipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTipos.Location = new System.Drawing.Point(56, 366);
+            this.BtnTipos.Location = new System.Drawing.Point(56, 317);
             this.BtnTipos.Name = "BtnTipos";
             this.BtnTipos.Size = new System.Drawing.Size(203, 39);
             this.BtnTipos.TabIndex = 7;
@@ -145,7 +145,7 @@
             // BtnEmpl
             // 
             this.BtnEmpl.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEmpl.Location = new System.Drawing.Point(56, 309);
+            this.BtnEmpl.Location = new System.Drawing.Point(56, 376);
             this.BtnEmpl.Name = "BtnEmpl";
             this.BtnEmpl.Size = new System.Drawing.Size(203, 39);
             this.BtnEmpl.TabIndex = 6;

@@ -24,7 +24,7 @@ namespace ProyectoBases
         private void inicializar()
         {
             comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
-            string[] plantaNombres = { "Parrita", "San Jose", "Cañas", "Zarapiqui" };
+            string[] plantaNombres = { "Guayabo", "Central", "La Romana"};
             comboBox1.Items.AddRange(plantaNombres);
         }
 
@@ -45,8 +45,11 @@ namespace ProyectoBases
 
             
             DB.PlantaDB planta = new DB.PlantaDB();
-            planta.InsertarPlanta(NewPlanta);
-            
+            planta.InsertarPlanta(NewPlanta); 
         }
+
+
+
+
     }
 }

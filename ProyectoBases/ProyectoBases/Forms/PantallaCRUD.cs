@@ -18,16 +18,21 @@ namespace ProyectoBases
         System.Windows.Forms.TextBox txf1, txf2, txf3, txf4, txf5;
         System.Windows.Forms.ComboBox cb1, cb2, cb3, cb4, cb5, cb6;
         String dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8, dato9;
+        System.Windows.Forms.CheckBox ck1, ck2, ck3, ck4, ck5, ck6, ck7;
 
-        String tablaNombre;
+        String tablaNombre, IdRow;
         int codigo;
 
-        public PantallaCRUD(String tn, int cd)
+
+        public PantallaCRUD(String tn, int cd, string Id)
         {
             InitializeComponent();
             this.tablaNombre = tn;
             this.codigo = cd;
+            this.IdRow = Id;
+            button1.Text = "Insertar";
 
+            //Llama a funcion para formatear los espacios necesarios dependiendo de la tabla
             switch (tablaNombre)
             {
                 case "Calendario":
@@ -35,6 +40,62 @@ namespace ProyectoBases
                     if (codigo == 2)
                     {
                         editar_calendario();
+                    }
+                    break;
+                case "Feriados":
+                    es_Feriado();
+                    if (codigo == 2)
+                    {
+                        editar_Feriado();
+                    }
+                    break;
+                case "DiasLaborales":
+                    es_DiaLaboral();
+                    if (codigo == 2)
+                    {
+                        editar_diaLaboral();
+                    }
+                    break;
+                case "Empleados":
+                    es_Empleados();
+                    if (codigo == 2)
+                    {
+                        editar_empleados();
+                    }
+                    break;
+                case "TiposEmpleados":
+                    es_TipoEmpleado();
+                    if (codigo == 2)
+                    {
+                        editar_tipoEmpleado();
+                    }
+                    break;
+                default:
+                    // code block
+                    break;
+            }
+        }
+
+        //BOTON PARA ENVIAR (INSERTAR 1 O EDITAR 2)
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            String respuestaSP = "";
+
+
+            switch (tablaNombre)
+            {
+                case "Calendario":
+                    enviar_calendario();
+                    if (codigo == 1)
+                    {
+                        //SP para INSERTAR
+                        respuestaSP = "Simple MessageBox";
+
+                    }
+                    if (codigo == 2)
+                    {
+                        //SP para EDITAR
                     }
                     break;
                 case "Feriados":
@@ -53,9 +114,15 @@ namespace ProyectoBases
                     // code block
                     break;
             }
+
+
+            MessageBox.Show(respuestaSP);
+            this.Dispose();
         }
 
+
         //-------------------------------------------------------
+        // CALENDARIO
 
         public void esCalendario()
         {
@@ -68,7 +135,8 @@ namespace ProyectoBases
             label7.Text = "Hora de inicio";
             label8.Text = "Hora final";
             label9.Text = "Periodo pago";
-            button1.Text = "Insertar";
+            label10.Visible = false;
+            
 
             //txf1 = nombre
             txf1 = new System.Windows.Forms.TextBox();
@@ -174,13 +242,14 @@ namespace ProyectoBases
 
         public void editar_calendario()
         {
+            label1.Text = "Editar calendario";
             textBox1.Enabled = false; //id
             button1.Text = "Editar";
 
             //HERE SQL
             //Procedimiento para obtener los valores actuales.
 
-            textBox1.Text = "Id";
+            textBox1.Text = IdRow;
             txf1.Text = "Nombre";
             txf2.Text = "PagoHora";
             txf3.Text = "PagoExtra";
@@ -207,59 +276,320 @@ namespace ProyectoBases
         }
 
 
+        //-------------------------------------------------------
+        // FERIADOS
+
+        public void es_Feriado()
+        {
+            label1.Text = "Insertar Dias Feriados";
+            label2.Text = "IdDia";
+            label3.Text = "IdCalendario";
+            label4.Text = "Fecha";
+            label5.Text = "Etiqueta";
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
 
 
+            //txf1 = IdCalendario
+            txf1 = new System.Windows.Forms.TextBox();
+            txf1.Location = new Point(155, 157);
+            txf1.Size = new Size(235, 22);
+            this.Controls.Add(txf1);
+
+            //txf2 = Fecha
+            txf2 = new System.Windows.Forms.TextBox();
+            txf2.Location = new Point(155, 205);
+            txf2.Size = new Size(200, 22);
+            this.Controls.Add(txf2);
+
+            String[] etiquetas = { "Doble", "Extra", "Null" };
+            //cb5 = Etiqueta
+            cb5 = new System.Windows.Forms.ComboBox();
+            cb5.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb5.Items.AddRange(etiquetas);
+            cb5.Location = new Point(155, 255);
+            cb5.Size = new Size(100, 22);
+            cb5.DropDownHeight = 22 * 5;
+            this.Controls.Add(cb5);
+        }
+
+        public void editar_Feriado()
+        {
+            label1.Text = "Editar Dias Feriados";
+            textBox1.Enabled = false; //id
+            button1.Text = "Editar";
+
+            //HERE SQL
+            //Procedimiento para obtener los valores actuales.
+            //CHANGE estos valores por los valores anteriores obtenidos
+            textBox1.Text = "IdDIa";
+            txf1.Text = "IdCalendario";
+            txf2.Text = "Fecha";
+            cb5.SelectedItem = "Null";
+        }
+
+        public void enviar_Calendario()
+        {
+            dato1 = textBox1.Text; //IdDIa
+            dato2 = txf1.Text; //IdCalendario
+            dato3 = txf2.Text; //Fecha
+            dato4 = cb5.SelectedItem.ToString(); //etiqueta
+        }
+
+
+        //-------------------------------------------------------
+        // DiaLaboral
+
+        public void es_DiaLaboral()
+        {
+            label1.Text = "Insertar dia laboral";
+            label2.Text = "idCalendario";
+            label3.Text = "Lunes";
+            label4.Text = "Martes";
+            label5.Text = "Miercoles";
+            label6.Text = "Jueves";
+            label7.Text = "Viernes";
+            label8.Text = "Sabados";
+            label9.Text = "Domingos";
+            label10.Visible = false;
+
+
+            //ck1 = lunes
+            ck1 = new System.Windows.Forms.CheckBox();
+            ck1.Location = new Point(155, 155);
+            ck1.Height = 22;
+            ck1.Width = 22;
+            this.Controls.Add(ck1);
+
+            //ck2 = martes
+            ck2 = new System.Windows.Forms.CheckBox();
+            ck2.Location = new Point(155, 205);
+            ck2.Height = 22;
+            ck2.Width = 22;
+            this.Controls.Add(ck2);
+
+            //ck3 = miercoles
+            ck3 = new System.Windows.Forms.CheckBox();
+            ck3.Location = new Point(155, 255);
+            ck3.Height = 22;
+            ck3.Width = 22;
+            this.Controls.Add(ck3);
+
+            //ck4 = nombre
+            ck4 = new System.Windows.Forms.CheckBox();
+            ck4.Location = new Point(155, 305);
+            ck4.Height = 22;
+            ck4.Width = 22;
+            this.Controls.Add(ck4);
+
+            //ck5 = nombre
+            ck5 = new System.Windows.Forms.CheckBox();
+            ck5.Location = new Point(155, 355);
+            ck5.Height = 22;
+            ck5.Width = 22;
+            this.Controls.Add(ck5);
+
+            //ck6 = nombre
+            ck6 = new System.Windows.Forms.CheckBox();
+            ck6.Location = new Point(155, 405);
+            ck6.Height = 22;
+            ck6.Width = 22;
+            this.Controls.Add(ck6);
+
+            //ck7 = nombre
+            ck7 = new System.Windows.Forms.CheckBox();
+            ck7.Location = new Point(155, 455);
+            ck7.Height = 22;
+            ck7.Width = 22;
+            this.Controls.Add(ck7);
+
+        }
+
+        public void editar_diaLaboral()
+        {
+            label1.Text = "Editar dia laboral";
+            textBox1.Enabled = false; //id
+            button1.Text = "Editar";
+
+            //HERE SQL
+            //Procedimiento para obtener los valores actuales.
+
+            textBox1.Text = IdRow;
+            ck1.Checked = true;
+            ck2.Checked = true;
+            ck3.Checked = true;
+            ck4.Checked = true;
+            ck5.Checked = true;
+            ck6.Checked = true;
+            ck7.Checked = true;
+
+        }
+
+        public void enviar_feriado()
+        {
+            dato1 = textBox1.Text; //id
+
+            dato2 = ck1.Checked.ToString();
+            if (ck1.Checked){ dato2 = "Y"; } else { dato2 = "N"; }
+
+
+        }
+
+
+        //-------------------------------------------------------
+        // EMPLEADOS
+
+        public void es_Empleados()
+        {
+            label1.Text = "Insertar empleado";
+            label2.Text = "Id";
+            label3.Text = "Nombre";
+            label4.Text = "Fecha Ingreso";
+            label5.Text = "Fecha Salida";
+            label6.Text = "Departamento";
+            label7.Text = "Id Calendario";
+            label8.Text = "Supervisor";
+            label9.Visible = false;
+            label10.Visible = false;
+
+
+            //txf1 = nombre
+            txf1 = new System.Windows.Forms.TextBox();
+            txf1.Location = new Point(155, 157);
+            txf1.Size = new Size(235, 22);
+            this.Controls.Add(txf1);
+
+            //txf2 = fecha ingreso
+            txf2 = new System.Windows.Forms.TextBox();
+            txf2.Location = new Point(190, 205);
+            txf2.Size = new Size(200, 22);
+            this.Controls.Add(txf2);
+
+            //txf3 = fecha salida
+            txf3 = new System.Windows.Forms.TextBox();
+            txf3.Location = new Point(190, 255);
+            txf3.Size = new Size(200, 22);
+            this.Controls.Add(txf3);
+
+            //**
+            //cb1 = departamento / tipos empleado  ->  GET ALL TiposEmpleados
+            String[] tipoEmpleado = { "Produccion", "Ventas", "Marketing" };
+            cb1 = new System.Windows.Forms.ComboBox();
+            cb1.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb1.Items.AddRange(tipoEmpleado);
+            cb1.Location = new Point(190, 305);
+            cb1.Size = new Size(200, 22);
+            cb1.DropDownHeight = 22 * 5;
+            this.Controls.Add(cb1);
+
+            //**
+            //cb2 = id calendario ->  GET ALL CalendarioNums
+            String[] calendario = { "1", "2", "3" };
+            cb2 = new System.Windows.Forms.ComboBox();
+            cb2.DropDownStyle = ComboBoxStyle.DropDownList;
+            cb2.Items.AddRange(calendario);
+            cb2.Location = new Point(190, 355);
+            cb2.Size = new Size(50, 22);
+            cb2.DropDownHeight = 22 * 5;
+            this.Controls.Add(cb2);
+
+            //txf4 = supervisor num
+            txf4 = new System.Windows.Forms.TextBox();
+            txf4.Location = new Point(190, 405);
+            txf4.Size = new Size(200, 22);
+            this.Controls.Add(txf4);
+
+
+        }
+
+        public void editar_empleados()
+        {
+            label1.Text = "Editar empleado";
+            textBox1.Enabled = false; //id
+            button1.Text = "Editar";
+
+            //HERE SQL
+            //Procedimiento para obtener los valores actuales.
+
+            textBox1.Text = IdRow;
+            txf1.Text = "Nombre";
+            txf2.Text = "fecha ing";
+            txf3.Text = "fecha sal";
+            txf4.Text = "superv num";
+            cb1.SelectedItem = "Produccion";
+            cb2.SelectedItem = "1";
+       
+        }
+
+        public void enviar_empleados()
+        {
+            dato1 = textBox1.Text; //id
+            dato2 = txf1.Text; //nombre
+            dato3 = txf2.Text; //ingreso
+            dato4 = txf3.Text; //salida
+            dato5 = cb1.SelectedItem.ToString(); //dept
+            dato6 = cb2.SelectedItem.ToString(); //calendario
+            dato7 = txf4.Text; //supervisor
+        
+        }
+
+
+        //-------------------------------------------------------
+        // Tipo Empleado
+
+        public void es_TipoEmpleado()
+        {
+            label1.Text = "Insertar Tipo Empleado";
+            label2.Text = "Id";
+            label3.Text = "Nombre";
+            label4.Visible = false;
+            label5.Visible = false;
+            label6.Visible = false;
+            label7.Visible = false;
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+
+
+            //txf1 = nombre
+            txf1 = new System.Windows.Forms.TextBox();
+            txf1.Location = new Point(155, 157);
+            txf1.Size = new Size(235, 22);
+            this.Controls.Add(txf1);
+            
+        }
+
+        public void editar_tipoEmpleado()
+        {
+            label1.Text = "Editar Tipo Empleado";
+            textBox1.Enabled = false; //id
+            button1.Text = "Editar";
+
+            //HERE SQL
+            //Procedimiento para obtener los valores actuales.
+
+            textBox1.Text = IdRow;
+            txf1.Text = "Nombre";
+            
+        }
+
+        public void enviar_tipoEmpleado()
+        {
+            dato1 = textBox1.Text; //id
+            dato2 = txf1.Text; //nombre
+            
+        }
 
 
 
         //------------------------------------------------------
 
 
-        private void button1_Click(object sender, EventArgs e)
-        {
 
-            String respuestaSP = "";
-            
-
-            switch (tablaNombre)
-            {
-                case "Calendario":
-                    enviar_calendario();
-                    if (codigo == 1)
-                    {
-                        //SP para INSERTAR
-                        respuestaSP =  "Simple MessageBox";
-                       
-                    }
-                    if (codigo == 2)
-                    {
-                        //SP para EDITAR
-                    }
-                    break;
-                case "Feriados":
-                    // code block
-                    break;
-                case "DiasLaborales":
-                    // code block
-                    break;
-                case "Empleados":
-                    // code block
-                    break;
-                case "TiposEmpleados":
-                    // code block
-                    break;
-                default:
-                    // code block
-                    break;
-            }
-
-
-            MessageBox.Show(respuestaSP);
-            this.Dispose();
-        }
-
-
-        //------------
+        //------------UNUSED
         private void PantallaCRUD_Load(object sender, EventArgs e)
         {
 

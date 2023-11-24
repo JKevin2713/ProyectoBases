@@ -38,6 +38,31 @@ namespace ProyectoBases
         }
 
 
+        private void button2_Click(object sender, EventArgs e)
+        {
+            PantallaTabla abrirplanta = new PantallaTabla("Feriados");
+            abrirplanta.ShowDialog();
+        }
+
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            PantallaTabla abrirplanta = new PantallaTabla("DiasLaborales");
+            abrirplanta.ShowDialog();
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            PantallaTabla abrirplanta = new PantallaTabla("Empleados");
+            abrirplanta.ShowDialog();
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            PantallaTabla abrirplanta = new PantallaTabla("TiposEmpleados");
+            abrirplanta.ShowDialog();
+        }
         //----------------------------------
 
         private void label1_Click(object sender, EventArgs e)
@@ -52,30 +77,16 @@ namespace ProyectoBases
 
         
 
-        private void button2_Click(object sender, EventArgs e)
-        {
 
-        }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void button8_Click(object sender, EventArgs e)
         {

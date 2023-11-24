@@ -39,6 +39,7 @@
             this.label9 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.label10 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label3
@@ -150,7 +151,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(134, 534);
+            this.button1.Location = new System.Drawing.Point(135, 555);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(146, 41);
             this.button1.TabIndex = 10;
@@ -158,9 +159,20 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(26, 495);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(62, 20);
+            this.label10.TabIndex = 11;
+            this.label10.Text = "label10";
+            // 
             // PantallaCRUD
             // 
             this.ClientSize = new System.Drawing.Size(447, 625);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label9);
@@ -191,5 +203,6 @@
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label10;
     }
 }
