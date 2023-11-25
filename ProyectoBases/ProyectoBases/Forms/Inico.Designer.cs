@@ -71,6 +71,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Inico";
             this.Text = "Inicio";
+            this.Load += new System.EventHandler(this.Inico_Load);
             this.ResumeLayout(false);
 
         }

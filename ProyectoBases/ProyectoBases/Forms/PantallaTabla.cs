@@ -7,6 +7,8 @@ using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
 using System.Windows.Forms;
+using DB;
+using Model;
 
 namespace ProyectoBases.Forms
 {
@@ -17,10 +19,13 @@ namespace ProyectoBases.Forms
         String tablaNombre, rowId;
         List<string[]> datosTabla;
         Button boton1, boton2;
+        String Connection;
+        CalendarioLaboralDB calendario = new CalendarioLaboralDB();
 
-        public PantallaTabla(String tn)
+        public PantallaTabla(String tn, String connectionString)
         {
             InitializeComponent();
+            this.Connection = connectionString;
             this.tablaNombre = tn;
 
             //Llama a funcion para formatear la tabla con las columnas indicadas
@@ -95,10 +100,9 @@ namespace ProyectoBases.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            getSelectedItem();
-            PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 1, rowId);
+           
+            PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 1, rowId, Connection);
             insertarCalendario.Show();
-            actualizarTabla();
         }
 
         
@@ -106,7 +110,7 @@ namespace ProyectoBases.Forms
         private void button2_Click(object sender, EventArgs e)
         {
             getSelectedItem();
-            PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 2, rowId);
+            PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 2, rowId, Connection);
             insertarCalendario.Show();
             actualizarTabla();
 
@@ -114,12 +118,13 @@ namespace ProyectoBases.Forms
 
         private void button3_Click(object sender, EventArgs e)
         {   //ELIMINAR
+            getSelectedItem();
             String respuestaSP = "";
             switch (tablaNombre)
             {   
                 case "Calendario":
-                    // CODE BLOCK
-
+  
+                    EliminarCalendario();
                     break;
                 case "Feriados":
                     // code block
@@ -215,16 +220,16 @@ namespace ProyectoBases.Forms
 
         }
 
+        private void EliminarCalendario()
+        {
+            int idE = Convert.ToInt32(rowId);
+            calendario.DeleteCalendarioLaboral(idE, Connection);
+        }
         private void actualizar_Calendario()
         {
             tabla1.Rows.Clear();
-            datosTabla = new List<string[]>();
-
-            String[] one = { "1", "caledariouno", "5", "6", "7", "9 am", "10am" }; //
-            for (int i = 0; i < 30; i++)
-            {
-                datosTabla.Add(one);
-            }
+            
+            datosTabla = calendario.VerCalendarioLaboral(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)

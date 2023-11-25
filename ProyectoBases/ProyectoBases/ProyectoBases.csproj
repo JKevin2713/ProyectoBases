@@ -98,6 +98,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DB\CalendarioLaboralDB.cs" />
+    <Compile Include="DB\DiasFeriadosDB.cs" />
+    <Compile Include="DB\DiasLaboralesDB.cs" />
+    <Compile Include="DB\EmpleadoDB.cs" />
+    <Compile Include="DB\MarcaDB.cs" />
+    <Compile Include="DB\PlanillasDB.cs" />
+    <Compile Include="DB\TipoEmpleado.cs" />
+    <Compile Include="DB\TipoPago.cs" />
     <Compile Include="Forms\Corporacion.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +149,12 @@
     <Compile Include="Forms\Inico.Designer.cs">
       <DependentUpon>Inico.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\CalendarioLaboral.cs" />
+    <Compile Include="Model\DiasFeriados.cs" />
+    <Compile Include="Model\DiasLaborales.cs" />
+    <Compile Include="Model\Empleado.cs" />
+    <Compile Include="Model\Marca.cs" />
+    <Compile Include="Model\Planillas.cs" />
     <Compile Include="Model\Planta.cs" />
     <Compile Include="Forms\Plantas.cs">
       <SubType>Form</SubType>
@@ -148,6 +162,8 @@
     <Compile Include="Forms\Plantas.Designer.cs">
       <DependentUpon>Plantas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\TipoEmpleado.cs" />
+    <Compile Include="Model\TipoPago.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\Constantes.cs" />

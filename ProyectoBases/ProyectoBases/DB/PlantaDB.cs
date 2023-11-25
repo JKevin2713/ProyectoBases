@@ -8,9 +8,7 @@ namespace DB
     public class PlantaDB
     {
 
-        private string connectionString = Utils.Constantes.ConnectionString;
-
-        public void InsertarPlanta(Planta planta)
+        public void InsertarPlanta(Planta planta, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -26,36 +24,7 @@ namespace DB
             }
         }
 
-        public Planta VerPlantas(int idPlanta)
-        {
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-
-                var query = "CALL Plantas(@idPlanta)";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@idPlanta", idPlanta);
-
-                    using (var reader = command.ExecuteReader())
-                    {
-                        if (reader.Read())
-                        {
-                            return new Planta
-                            {
-                                IdPlanta = Convert.ToInt32(reader["idPlanta"]),
-                                Nombre = reader["nombre"].ToString(),
-                                Conexion = Convert.ToBoolean(reader["conexion"])
-                            };
-                        }
-                    }
-                }
-            }
-
-            return null;
-        }
-
-        public void ActualizarPlanta(Planta planta)
+        public void ActualizarPlanta(Planta planta, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -69,23 +38,9 @@ namespace DB
                     command.Parameters.AddWithValue("@conexion", planta.Conexion);
                     command.ExecuteNonQuery();
                 }
+                connection.Close();
             }
         }
 
-
-        public void DeletePlanta(int idPlanta)
-        {
-            using (var connection = new MySqlConnection(connectionString))
-            {
-                connection.Open();
-
-                var query = "CALL EliminarPlanta(@idPlanta)";
-                using (var command = new MySqlCommand(query, connection))
-                {
-                    command.Parameters.AddWithValue("@idPlanta", idPlanta);
-                    command.ExecuteNonQuery();
-                }
-            }
-        }
     }
 }
