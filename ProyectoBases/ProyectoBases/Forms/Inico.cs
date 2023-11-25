@@ -34,7 +34,7 @@ namespace ProyectoBases
             //Ingresar a la aplicacion de plantas
             String plantaNombre = comboBox1.SelectedItem.ToString();
             Plantas PlantasInicio = new Plantas(plantaNombre); // Crea una nueva instancia de la segunda ventana
-            PlantasInicio.ShowDialog(); // Muestra la segunda ventana
+            PlantasInicio.Show(); // Muestra la segunda ventana
         }
 
         private void button2_Click(object sender, EventArgs e)

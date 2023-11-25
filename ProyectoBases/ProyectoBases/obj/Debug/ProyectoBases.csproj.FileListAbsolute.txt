@@ -87,3 +87,6 @@ C:\Users\marin\OneDrive\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBas
 C:\Users\marin\OneDrive\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Plantas.resources
 C:\Users\marin\OneDrive\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PantallaCRUD.resources
 C:\Users\marin\OneDrive\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PantallaTabla.resources
+C:\Users\marin\OneDrive\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.SimuladorMarcas.resources
+C:\Users\marin\OneDrive\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.MarcasCRUD.resources
+C:\Users\marin\OneDrive\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.QueryPlantas.resources

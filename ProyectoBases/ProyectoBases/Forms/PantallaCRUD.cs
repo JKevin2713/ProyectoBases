@@ -70,6 +70,20 @@ namespace ProyectoBases
                         editar_tipoEmpleado();
                     }
                     break;
+                case "Marcas":
+                    es_TipoEmpleado();
+                    if (codigo == 2)
+                    {
+                       // editar_Marcas();
+                    }
+                    break;
+                case "Planillas":
+                    es_Planilla();
+                    if (codigo == 2)
+                    {
+                        editar_planilla();
+                    }
+                    break;
                 default:
                     // code block
                     break;
@@ -582,6 +596,85 @@ namespace ProyectoBases
             dato2 = txf1.Text; //nombre
             
         }
+
+
+        //-------------------------------------------------------
+        // CALENDARIO
+
+        public void es_Planilla()
+        {
+            label1.Text = "Insertar planilla";
+            label2.Text = "Id";
+            label3.Text = "Id Empleado";
+            label4.Text = "Salario bruto";
+            label5.Text = "Salario neto";
+            label6.Text = "Porcentage obligaciones";
+            label7.Text = "Estado";
+            label8.Visible = false;
+            label9.Visible = false;
+            label10.Visible = false;
+
+
+            //txf1 = id empleado
+            txf1 = new System.Windows.Forms.TextBox();
+            txf1.Location = new Point(155, 157);
+            txf1.Size = new Size(235, 22);
+            this.Controls.Add(txf1);
+
+            //txf2 = salario bruto
+            txf2 = new System.Windows.Forms.TextBox();
+            txf2.Location = new Point(190, 205);
+            txf2.Size = new Size(200, 22);
+            this.Controls.Add(txf2);
+
+            //txf3 = salario neto
+            txf3 = new System.Windows.Forms.TextBox();
+            txf3.Location = new Point(190, 255);
+            txf3.Size = new Size(200, 22);
+            this.Controls.Add(txf3);
+
+            //txf4 = porcentaje obligaciones
+            txf4 = new System.Windows.Forms.TextBox();
+            txf4.Location = new Point(190, 305);
+            txf4.Size = new Size(200, 22);
+            this.Controls.Add(txf4);
+
+            //ck1 = estado
+            ck1 = new System.Windows.Forms.CheckBox();
+            ck1.Location = new Point(155, 355);
+            ck1.Height = 22;
+            ck1.Width = 22;
+            this.Controls.Add(ck1);
+        }
+
+        public void editar_planilla()
+        {
+            label1.Text = "Editar Planilla";
+            textBox1.Enabled = false; //id
+            button1.Text = "Editar";
+
+            //HERE SQL
+            //Procedimiento para obtener los valores actuales.
+
+            textBox1.Text = IdRow;
+            txf1.Text = "Nombre";
+            txf2.Text = "PagoHora";
+            txf3.Text = "PagoExtra";
+            txf4.Text = "PagoDoble";
+            //get estado check box
+        }
+
+        public void enviar_planilla()
+        {
+            dato1 = textBox1.Text; //id
+            dato2 = txf1.Text; //nombre
+            dato3 = txf2.Text; //pagoHora
+            dato4 = txf3.Text; //pagoExtra
+            dato5 = txf4.Text; //pagoDoble
+            dato6 = ck1.Checked.ToString(); //horaInicio
+            
+        }
+
 
 
 

@@ -34,35 +34,57 @@ namespace ProyectoBases
         private void button1_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Calendario");
-            abrirplanta.ShowDialog();
+            abrirplanta.Show();
         }
 
 
         private void button2_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Feriados");
-            abrirplanta.ShowDialog();
+            abrirplanta.Show();
         }
 
 
         private void button3_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("DiasLaborales");
-            abrirplanta.ShowDialog();
+            abrirplanta.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Empleados");
-            abrirplanta.ShowDialog();
+            abrirplanta.Show();
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("TiposEmpleados");
-            abrirplanta.ShowDialog();
+            abrirplanta.Show();
         }
+
+
+        private void BtnMarcas_Click(object sender, EventArgs e)
+        {
+            PantallaTabla abrirplanta = new PantallaTabla("Marcas");
+            abrirplanta.Show();
+        }
+
+        private void BtnPlanillas_Click(object sender, EventArgs e)
+        {
+            PantallaTabla abrirplanta = new PantallaTabla("Planillas");
+            abrirplanta.Show();
+        }
+
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            QueryPlantas queryPlantas = new QueryPlantas();
+            queryPlantas.Show();    
+        }
+
+
         //----------------------------------
 
         private void label1_Click(object sender, EventArgs e)
@@ -88,10 +110,6 @@ namespace ProyectoBases
 
         
 
-        private void button8_Click(object sender, EventArgs e)
-        {
-
-        }
 
        
 
@@ -99,5 +117,7 @@ namespace ProyectoBases
         {
 
         }
+
+        
     }
 }

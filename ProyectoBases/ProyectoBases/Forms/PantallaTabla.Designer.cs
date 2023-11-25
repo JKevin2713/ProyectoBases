@@ -68,7 +68,7 @@
             this.tabla1.Name = "tabla1";
             this.tabla1.RowHeadersWidth = 51;
             this.tabla1.RowTemplate.Height = 24;
-            this.tabla1.Size = new System.Drawing.Size(552, 486);
+            this.tabla1.Size = new System.Drawing.Size(552, 511);
             this.tabla1.TabIndex = 0;
             this.tabla1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.tabla1_CellContentClick);
             // 
@@ -81,7 +81,7 @@
             this.panel3.Controls.Add(this.button1);
             this.panel3.Location = new System.Drawing.Point(557, 48);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(255, 485);
+            this.panel3.Size = new System.Drawing.Size(255, 511);
             this.panel3.TabIndex = 2;
             // 
             // button4
@@ -130,7 +130,7 @@
             // 
             // PantallaTabla
             // 
-            this.ClientSize = new System.Drawing.Size(813, 535);
+            this.ClientSize = new System.Drawing.Size(813, 563);
             this.Controls.Add(this.tabla1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);

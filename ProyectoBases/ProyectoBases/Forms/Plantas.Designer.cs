@@ -120,6 +120,7 @@
             this.BtnPlanillas.TabIndex = 9;
             this.BtnPlanillas.Text = "Planillas";
             this.BtnPlanillas.UseVisualStyleBackColor = true;
+            this.BtnPlanillas.Click += new System.EventHandler(this.BtnPlanillas_Click);
             // 
             // BtnMarcas
             // 
@@ -130,6 +131,7 @@
             this.BtnMarcas.TabIndex = 8;
             this.BtnMarcas.Text = "Marcas";
             this.BtnMarcas.UseVisualStyleBackColor = true;
+            this.BtnMarcas.Click += new System.EventHandler(this.BtnMarcas_Click);
             // 
             // BtnTipos
             // 

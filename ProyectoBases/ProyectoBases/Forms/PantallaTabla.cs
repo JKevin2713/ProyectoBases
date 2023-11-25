@@ -16,6 +16,7 @@ namespace ProyectoBases.Forms
 
         String tablaNombre, rowId;
         List<string[]> datosTabla;
+        Button boton1, boton2;
 
         public PantallaTabla(String tn)
         {
@@ -39,6 +40,12 @@ namespace ProyectoBases.Forms
                     break;
                 case "TiposEmpleados":
                     es_TipoEmpleado();
+                    break;
+                case "Marcas":
+                    es_Marcas();
+                    break;
+                case "Planillas":
+                    es_Planilla();
                     break;
                 default:
                     // code block
@@ -74,6 +81,12 @@ namespace ProyectoBases.Forms
                 case "TiposEmpleados":
                     actualizar_TipoEmpleado();
                     break;
+                case "Marcas":
+                    actualizar_Marcas();
+                    break;
+                case "Planillas":
+                    actualizar_Planilla();
+                    break;
                 default:
                     // code block
                     break;
@@ -84,7 +97,7 @@ namespace ProyectoBases.Forms
         {
             getSelectedItem();
             PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 1, rowId);
-            insertarCalendario.ShowDialog();
+            insertarCalendario.Show();
             actualizarTabla();
         }
 
@@ -94,7 +107,7 @@ namespace ProyectoBases.Forms
         {
             getSelectedItem();
             PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 2, rowId);
-            insertarCalendario.ShowDialog();
+            insertarCalendario.Show();
             actualizarTabla();
 
         }
@@ -120,11 +133,50 @@ namespace ProyectoBases.Forms
                 case "TiposEmpleados":
                     // code block
                     break;
+                case "Marcas":
+                    // code block
+                    break;
+                case "Planillas":
+                    // code block
+                    break;
                 default:
                     // code block
                     break;
             }
             MessageBox.Show(respuestaSP);
+        }
+
+        private void boton1_Click(object sender, EventArgs e)
+        {
+            switch (tablaNombre)
+            {
+                case "Marcas": //GENERAR MARCAS
+                    SimuladorMarcas a = new SimuladorMarcas();
+                    a.Show();
+                    break;
+                case "Planillas":
+                    // code block
+                    break;
+                default:
+                    // code block
+                    break;
+            }
+        }
+
+        private void boton2_Click(object sender, EventArgs e)
+        {
+            switch (tablaNombre)
+            {
+                case "Marcas": // APROBAR MARCAS
+                    // code block
+                    break;
+                case "Planillas":
+                    // code block
+                    break;
+                default:
+                    // code block
+                    break;
+            }
         }
 
         //----------------------------------------------------------------------------------------
@@ -345,7 +397,123 @@ namespace ProyectoBases.Forms
         }
 
 
+        //----------------------------------------------------------------------------------------
+        // MARCAS
+        private void es_Marcas()
+        {
+            label1.Text = "Marcas Empleados";
+            tabla1.ColumnCount = 6;
+            tabla1.Name = "marcas";
+            tabla1.RowHeadersVisible = true;
 
+            tabla1.Columns[0].Name = "Id";
+            tabla1.Columns[1].Name = "EmpleadoId";
+            tabla1.Columns[2].Name = "Fecha";
+            tabla1.Columns[3].Name = "Entrada";
+            tabla1.Columns[4].Name = "Salida";
+            tabla1.Columns[5].Name = "Aprobado";
+
+            tabla1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tabla1.MultiSelect = false;
+            tabla1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            boton1 = new Button();
+            boton1.Text = "Generar marcas";
+            boton1.Location = new Point(60, 285);
+            boton1.Size = new Size(128, 45);
+            boton1.Click += boton1_Click;
+            panel3.Controls.Add(boton1);
+
+            boton2 = new Button();
+            boton2.Text = "Aprobar * marcas";
+            boton2.Location = new Point(60, 355);
+            boton2.Size = new Size(128, 45);
+            boton2.Click += boton2_Click;
+            panel3.Controls.Add(boton2);
+
+            button1.Location = new Point(60, 75);
+            button2.Location = new Point(60, 145);
+            button3.Location = new Point(60, 215);
+            button4.Location = new Point(60, 5);
+        }
+
+        private void actualizar_Marcas()
+        {
+            tabla1.Rows.Clear();
+            datosTabla = new List<string[]>();
+
+            String[] one = { "1", "caledariouno", "5", "6", "7", "9 am", "10am" }; //
+            for (int i = 0; i < 30; i++)
+            {
+                datosTabla.Add(one);
+            }
+
+            int rows = datosTabla.Count;
+            for (int i = 0; i < rows; i++)
+            {
+                tabla1.Rows.Add(datosTabla[i]);
+            }
+
+        }
+
+        //----------------------------------------------------------------------------------------
+        // PLANILLA
+        private void es_Planilla()
+        {
+            label1.Text = "Planilla";
+            tabla1.ColumnCount = 6;
+            tabla1.Name = "planilla";
+            tabla1.RowHeadersVisible = true;
+
+            tabla1.Columns[0].Name = "Id";
+            tabla1.Columns[1].Name = "Empleado";
+            tabla1.Columns[2].Name = "Estado";
+            tabla1.Columns[3].Name = "Salario Bruto";
+            tabla1.Columns[4].Name = "Salario Neto";
+            tabla1.Columns[5].Name = "Porcentaje Obligaciones";
+
+            tabla1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tabla1.MultiSelect = false;
+            tabla1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+
+            boton1 = new Button();
+            boton1.Text = "Generar planilla";
+            boton1.Location = new Point(60, 285);
+            boton1.Size = new Size(128, 45);
+            boton1.Click += boton1_Click;   
+            panel3.Controls.Add(boton1);
+
+            boton2 = new Button();
+            boton2.Text = "Enviar planilla";
+            boton2.Location = new Point(60, 355);
+            boton2.Size = new Size(128, 45);
+            boton2.Click += boton2_Click;   
+            panel3.Controls.Add(boton2);
+
+            button1.Location = new Point(60, 75);
+            button2.Location = new Point(60, 145);
+            button3.Location = new Point(60, 215);
+            button4.Location = new Point(60, 5);
+        }
+
+        private void actualizar_Planilla()
+        {
+            tabla1.Rows.Clear();
+            datosTabla = new List<string[]>();
+
+            String[] one = { "1", "caledariouno", "5", "6", "7", "9 am", "10am" }; //
+            for (int i = 0; i < 30; i++)
+            {
+                datosTabla.Add(one);
+            }
+
+            int rows = datosTabla.Count;
+            for (int i = 0; i < rows; i++)
+            {
+                tabla1.Rows.Add(datosTabla[i]);
+            }
+
+        }
 
 
 
