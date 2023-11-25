@@ -18,12 +18,23 @@ namespace ProyectoBases
         public Inico()
         {
             InitializeComponent();
+            inicializar();
         }
+
+        private void inicializar()
+        {
+            comboBox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            string[] plantaNombres = { "Guayabo", "Central", "La Romana"};
+            comboBox1.Items.AddRange(plantaNombres);
+        }
+
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Plantas PlantasInicio = new Plantas(); // Crea una nueva instancia de la segunda ventana
-            PlantasInicio.ShowDialog(); // Muestra la segunda ventana
+            //Ingresar a la aplicacion de plantas
+            String plantaNombre = comboBox1.SelectedItem.ToString();
+            Plantas PlantasInicio = new Plantas(plantaNombre); // Crea una nueva instancia de la segunda ventana
+            PlantasInicio.Show(); // Muestra la segunda ventana
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -32,10 +43,13 @@ namespace ProyectoBases
             NewPlanta.Nombre = "Santa Cruz";
             NewPlanta.Conexion = true;
 
-            DB.PlantaDB planta = new DB.PlantaDB();
-            planta.InsertarPlanta(NewPlanta);
             
+            DB.PlantaDB planta = new DB.PlantaDB();
+            planta.InsertarPlanta(NewPlanta); 
         }
+
+
+
 
     }
 }
