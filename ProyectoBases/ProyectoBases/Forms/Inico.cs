@@ -31,25 +31,28 @@ namespace ProyectoBases
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //Ingresar a la aplicacion de plantas
-            String plantaNombre = comboBox1.SelectedItem.ToString();
-            Plantas PlantasInicio = new Plantas(plantaNombre); // Crea una nueva instancia de la segunda ventana
-            PlantasInicio.Show(); // Muestra la segunda ventana
+            try
+            {
+                string plantaNombre = comboBox1.SelectedItem.ToString();
+                Plantas PlantasInicio = new Plantas(plantaNombre);
+      
+                PlantasInicio.Show();
+            }
+            catch (NullReferenceException)
+            {
+                // Maneja el caso en que no haya un elemento seleccionado
+                MessageBox.Show("Por favor, selecciona una planta.");
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Planta NewPlanta = new Planta();
-            NewPlanta.Nombre = "Santa Cruz";
-            NewPlanta.Conexion = true;
 
-            
-            DB.PlantaDB planta = new DB.PlantaDB();
-            planta.InsertarPlanta(NewPlanta); 
         }
 
+        private void Inico_Load(object sender, EventArgs e)
+        {
 
-
-
+        }
     }
 }

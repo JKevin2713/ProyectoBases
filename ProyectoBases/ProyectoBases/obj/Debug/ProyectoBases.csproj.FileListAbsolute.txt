@@ -84,3 +84,9 @@ C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\De
 C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CopyComplete
 C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.exe
 C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.MarcasCRUD.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.QueryPlantas.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.SimuladorMarcas.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PantallaTabla.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PantallaCRUD.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Plantas.resources

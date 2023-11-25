@@ -10,6 +10,8 @@ using static System.Windows.Forms.ComboBox;
 using static System.Windows.Forms.TextBox;
 using static System.Windows.Forms.VisualStyles.                                                                                                                                                                                                                                                                                                            VisualStyleElement;
 
+using DB;
+using Model;
 namespace ProyectoBases
 {
     public partial class PantallaCRUD : Form
@@ -22,14 +24,15 @@ namespace ProyectoBases
 
         String tablaNombre, IdRow;
         int codigo;
+        String connection;
 
-
-        public PantallaCRUD(String tn, int cd, string Id)
+        public PantallaCRUD(String tn, int cd, string Id, String connectionString)
         {
             InitializeComponent();
             this.tablaNombre = tn;
             this.codigo = cd;
             this.IdRow = Id;
+            this.connection = connectionString;
             button1.Text = "Insertar";
 
             //Llama a funcion para formatear los espacios necesarios dependiendo de la tabla
@@ -39,7 +42,8 @@ namespace ProyectoBases
                     esCalendario();
                     if (codigo == 2)
                     {
-                        editar_calendario();
+                        CalendarioAnterior();
+
                     }
                     break;
                 case "Feriados":
@@ -100,16 +104,16 @@ namespace ProyectoBases
             switch (tablaNombre)
             {
                 case "Calendario":
-                    enviar_calendario();
+                   
                     if (codigo == 1)
                     {
-                        //SP para INSERTAR
+                        enviar_calendario();
                         respuestaSP = "Simple MessageBox";
 
                     }
                     if (codigo == 2)
                     {
-                        //SP para EDITAR
+                        editar_calendario();
                     }
                     break;
                 case "Feriados":
@@ -254,14 +258,11 @@ namespace ProyectoBases
             this.Controls.Add(cb5);
         }
 
-        public void editar_calendario()
+        public void CalendarioAnterior()
         {
             label1.Text = "Editar calendario";
             textBox1.Enabled = false; //id
             button1.Text = "Editar";
-
-            //HERE SQL
-            //Procedimiento para obtener los valores actuales.
 
             textBox1.Text = IdRow;
             txf1.Text = "Nombre";
@@ -275,21 +276,92 @@ namespace ProyectoBases
             cb3.SelectedItem = horaPrueba.Substring(0, 2);
             cb4.SelectedItem = horaPrueba.Substring(3, 2);
             cb5.SelectedItem = "Mensual";
+
+        }
+        public void editar_calendario()
+        {
+
+            CalendarioLaboral c = new CalendarioLaboral();
+            c.IdCalendario = Convert.ToInt32(textBox1.Text);
+            c.Nombre = txf1.Text; //nombre
+            decimal temp;
+            if (decimal.TryParse(txf2.Text, out temp))
+            {
+                c.PagoHora = temp;
+            }
+            else
+            {
+                MessageBox.Show("Tipo de dato incorrecto");
+            }
+
+            if (decimal.TryParse(txf3.Text, out temp))
+            {
+                c.PagoHoraExtra = temp;
+            }
+            else
+            {
+                MessageBox.Show("Tipo de dato incorrecto");
+            }
+
+            if (decimal.TryParse(txf4.Text, out temp))
+            {
+                c.PagoHoraDoble = temp;
+            }
+            else
+            {
+                MessageBox.Show("Tipo de dato incorrecto");
+            }
+
+            c.HoraInicio = cb1.SelectedIndex * 10000 + cb2.SelectedIndex; //horaInicio
+            c.HoraFinal = cb3.SelectedIndex * 10000 + cb4.SelectedIndex; //horaFin
+            c.TipoPago = cb5.SelectedIndex + 1; //pago
+
+            CalendarioLaboralDB calendario = new CalendarioLaboralDB();
+            calendario.ActualizarCalendarioLaboral(c, connection);
+
         }
 
         public void enviar_calendario()
         {
-            dato1 = textBox1.Text; //id
-            dato2 = txf1.Text; //nombre
-            dato3 = txf2.Text; //pagoHora
-            dato4 = txf3.Text; //pagoExtra
-            dato5 = txf4.Text; //pagoDoble
-            dato6 = cb1.SelectedItem.ToString() + ":" + cb2.SelectedItem.ToString() + ":00"; //horaInicio
-            dato7 = cb3.SelectedItem.ToString() + ":" + cb4.SelectedItem.ToString() + ":00"; //horaFin
-            dato8 = cb5.SelectedItem.ToString(); //pago
+            CalendarioLaboral c = new CalendarioLaboral();
+            c.Nombre = txf1.Text; //nombre
+            decimal temp;
+            if (decimal.TryParse(txf2.Text, out temp))
+            {
+                c.PagoHora = temp;
+            }
+            else
+            {
+                MessageBox.Show("Tipo de dato incorrecto");
+            }
+
+            if (decimal.TryParse(txf3.Text, out temp))
+            {
+                c.PagoHoraExtra = temp;
+            }
+            else
+            {
+                MessageBox.Show("Tipo de dato incorrecto");
+            }
+
+            if (decimal.TryParse(txf4.Text, out temp))
+            {
+                c.PagoHoraDoble = temp;
+            }
+            else
+            {
+                MessageBox.Show("Tipo de dato incorrecto");
+            }
+
+            c.HoraInicio = cb1.SelectedIndex * 10000 + cb2.SelectedIndex; //horaInicio
+            c.HoraFinal = cb3.SelectedIndex * 10000 + cb4.SelectedIndex; //horaFin
+            c.TipoPago = cb5.SelectedIndex + 1; //pago
+            
+            CalendarioLaboralDB calendario = new CalendarioLaboralDB();
+            calendario.InsertarCalendarioLaboral(c, connection);
         }
 
-
+        
         //-------------------------------------------------------
         // FERIADOS
 
