@@ -45,14 +45,14 @@ namespace DB
                         {
                             String[] calendario = new String[]
                             {
-                        reader["idCalendario"].ToString(),
-                        reader["Nombre"].ToString(),
-                        reader["PagoHora"].ToString(),
-                        reader["PagoHoraExtra"].ToString(),
-                        reader["PagoHoraDoble"].ToString(),
-                        reader["HoraInicio"].ToString(),
-                        reader["HoraFinal"].ToString(),
-                        reader["tipoPago"].ToString()
+                                reader["idCalendario"].ToString(),
+                                reader["Nombre"].ToString(),
+                                reader["PagoHora"].ToString(),
+                                reader["PagoHoraExtra"].ToString(),
+                                reader["PagoHoraDoble"].ToString(),
+                                reader["HoraInicio"].ToString(),
+                                reader["HoraFinal"].ToString(),
+                                reader["tipoPago"].ToString()
                             };
 
                             calendarios.Add(calendario);
@@ -103,5 +103,34 @@ namespace DB
                 connection.Close();
             }
         }
+
+        public List<String> VerIdCalendario(String connectionString)
+        {
+            List<String> calendarios = new List<String>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerCalendarios()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String calendario = reader["idCalendario"].ToString();
+                            
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
+
+
     }
 }

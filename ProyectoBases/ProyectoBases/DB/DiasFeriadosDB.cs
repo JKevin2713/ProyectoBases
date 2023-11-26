@@ -1,14 +1,14 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using Model;
+using System.Collections.Generic;
 
 namespace DB
 {
     public class DiasFeriadosDB
     {
-        private string connectionString = Utils.Constantes.ConnectionString;
 
-        public void InsertarDiaFeriado(DiasFeriados diaFeriado)
+        public void InsertarDiaFeriado(DiasFeriados diaFeriado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -26,7 +26,7 @@ namespace DB
             }
         }
 
-        public void ActualizarDiaFeriado(DiasFeriados diaFeriado)
+        public void ActualizarDiaFeriado(DiasFeriados diaFeriado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -44,7 +44,7 @@ namespace DB
             }
         }
 
-        public void DeleteDiaFeriado(int idDia)
+        public void DeleteDiaFeriado(int idDia, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -58,5 +58,40 @@ namespace DB
                 }
             }
         }
+
+        public List<String[]> VerDiasFeriados(String connectionString)
+        {
+            List<String[]> feriados = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerDiaFeriado()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] feriado = new String[]
+                            {
+                                reader["IdDia"].ToString(),
+                                reader["IdCalendario"].ToString(),
+                                reader["Fecha"].ToString(),
+                                reader["Etiqueta"].ToString(),
+                                
+                            };
+
+                            feriados.Add(feriado);
+                        }
+                    }
+                }
+            }
+
+            return feriados;
+        }
+
+
     }
 }

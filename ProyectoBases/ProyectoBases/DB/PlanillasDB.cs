@@ -1,14 +1,14 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using Model;
+using System.Collections.Generic;
 
 namespace DB
 {
     public class PlanillasDB
     {
-        private string connectionString = Utils.Constantes.ConnectionString;
 
-        public void InsertarPlanilla(Planillas planilla)
+        public void InsertarPlanilla(Planillas planilla, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -28,7 +28,7 @@ namespace DB
             }
         }
 
-        public void ActualizarPlanilla(Planillas planilla)
+        public void ActualizarPlanilla(Planillas planilla, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -49,7 +49,7 @@ namespace DB
             }
         }
 
-        public void DeletePlanilla(int idPlanilla)
+        public void DeletePlanilla(int idPlanilla, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -63,5 +63,42 @@ namespace DB
                 }
             }
         }
+
+        public List<String[]> VerPlanilla(String connectionString)
+        {
+            List<String[]> calendarios = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerPlanilla()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] calendario = new String[]
+                            {
+                                reader["idPlanilla"].ToString(),
+                                reader["idEmpleado"].ToString(),
+                                reader["idPlanta"].ToString(),
+                                reader["estado"].ToString(),
+                                reader["salarioBruto"].ToString(),
+                                reader["salarioNeto"].ToString(),
+                                reader["PorcentajeObligaciones"].ToString()
+                                
+                            };
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
+
     }
 }

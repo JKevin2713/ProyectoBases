@@ -42,11 +42,13 @@
             this.BtnCalendario = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.checkBox1);
             this.panel1.Controls.Add(this.BtnSalir);
             this.panel1.Controls.Add(this.label3);
@@ -136,7 +138,7 @@
             // BtnTipos
             // 
             this.BtnTipos.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnTipos.Location = new System.Drawing.Point(56, 317);
+            this.BtnTipos.Location = new System.Drawing.Point(56, 324);
             this.BtnTipos.Name = "BtnTipos";
             this.BtnTipos.Size = new System.Drawing.Size(203, 39);
             this.BtnTipos.TabIndex = 7;
@@ -158,7 +160,7 @@
             // BtnDias
             // 
             this.BtnDias.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDias.Location = new System.Drawing.Point(56, 252);
+            this.BtnDias.Location = new System.Drawing.Point(56, 220);
             this.BtnDias.Name = "BtnDias";
             this.BtnDias.Size = new System.Drawing.Size(203, 39);
             this.BtnDias.TabIndex = 5;
@@ -169,7 +171,7 @@
             // BtnFeriado
             // 
             this.BtnFeriado.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnFeriado.Location = new System.Drawing.Point(56, 195);
+            this.BtnFeriado.Location = new System.Drawing.Point(56, 168);
             this.BtnFeriado.Name = "BtnFeriado";
             this.BtnFeriado.Size = new System.Drawing.Size(203, 39);
             this.BtnFeriado.TabIndex = 4;
@@ -180,7 +182,7 @@
             // BtnCalendario
             // 
             this.BtnCalendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnCalendario.Location = new System.Drawing.Point(56, 138);
+            this.BtnCalendario.Location = new System.Drawing.Point(56, 116);
             this.BtnCalendario.Name = "BtnCalendario";
             this.BtnCalendario.Size = new System.Drawing.Size(203, 39);
             this.BtnCalendario.TabIndex = 3;
@@ -192,7 +194,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(71, 92);
+            this.label2.Location = new System.Drawing.Point(71, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(188, 25);
             this.label2.TabIndex = 2;
@@ -209,6 +211,17 @@
             this.label1.Text = "Planta";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
+            // button1
+            // 
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(56, 272);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(203, 39);
+            this.button1.TabIndex = 14;
+            this.button1.Text = "Departamentos";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click_1);
             // 
             // Plantas
             // 
@@ -240,5 +253,6 @@
         private System.Windows.Forms.Button BtnCalendario;
         private System.Windows.Forms.Button BtnSalir;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button1;
     }
 }

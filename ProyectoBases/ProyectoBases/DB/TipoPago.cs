@@ -1,14 +1,15 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using Model;
+using System.Collections.Generic;
 
 namespace DB
 {
     public class TipoPagoDB
     {
-        private string connectionString = Utils.Constantes.ConnectionString;
 
-        public void InsertarTipoPago(TipoPago tipoPago)
+
+        public void InsertarTipoPago(TipoPago tipoPago, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -22,7 +23,7 @@ namespace DB
                 }
             }
         }
-        public void ActualizarTipoPago(TipoPago tipoPago)
+        public void ActualizarTipoPago(TipoPago tipoPago, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -38,7 +39,7 @@ namespace DB
             }
         }
 
-        public void DeleteTipoPago(int idTipo)
+        public void DeleteTipoPago(int idTipo, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -52,5 +53,36 @@ namespace DB
                 }
             }
         }
+
+        public List<String[]> VerTipoPago(String connectionString)
+        {
+            List<String[]> calendarios = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerTipoPago()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] calendario = new String[]
+                            {
+                                reader["idTipo"].ToString(),
+                                reader["nombre"].ToString()
+                            };
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
+
     }
 }

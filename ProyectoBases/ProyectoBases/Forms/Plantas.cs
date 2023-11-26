@@ -27,16 +27,13 @@ namespace ProyectoBases
             if (nombre == "Guayabo")
             {
                 connectionstring = Utils.Constantes.ConnectionString;
-
             }else if (nombre == "Central")
             {
                 connectionstring = Utils.Constantes.ConnectionString2;
-
             }
             else if (nombre == "La Romana")
             {
                 connectionstring = Utils.Constantes.ConnectionString3;
-
             }
         }
 
@@ -90,9 +87,16 @@ namespace ProyectoBases
         private void BtnPlanillas_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Planillas", connectionstring);
+            abrirplanta.plantaNombre(nombre);
             abrirplanta.Show();
         }
 
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            PantallaTabla abrirplanta = new PantallaTabla("Departamento", connectionstring);
+            abrirplanta.plantaNombre(nombre);
+            abrirplanta.Show();
+        }
 
         private void button8_Click(object sender, EventArgs e)
         {
