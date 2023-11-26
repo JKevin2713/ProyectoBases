@@ -1,14 +1,15 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using Model;
+using System.Collections.Generic;
 
 namespace DB
 {
     public class MarcaDB
     {
-        private string connectionString = Utils.Constantes.ConnectionString;
+   
 
-        public void InsertarMarca(Marca marca)
+        public void InsertarMarca(Marca marca, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -26,7 +27,7 @@ namespace DB
             }
         }
 
-        public void ActualizarMarca(Marca marca)
+        public void ActualizarMarca(Marca marca, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {

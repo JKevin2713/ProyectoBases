@@ -99,6 +99,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\CalendarioLaboralDB.cs" />
+    <Compile Include="DB\DepartamentoDB.cs" />
     <Compile Include="DB\DiasFeriadosDB.cs" />
     <Compile Include="DB\DiasLaboralesDB.cs" />
     <Compile Include="DB\EmpleadoDB.cs" />
@@ -150,6 +151,7 @@
       <DependentUpon>Inico.cs</DependentUpon>
     </Compile>
     <Compile Include="Model\CalendarioLaboral.cs" />
+    <Compile Include="Model\Departamento.cs" />
     <Compile Include="Model\DiasFeriados.cs" />
     <Compile Include="Model\DiasLaborales.cs" />
     <Compile Include="Model\Empleado.cs" />

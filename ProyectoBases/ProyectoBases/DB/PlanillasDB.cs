@@ -1,6 +1,7 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using Model;
+using System.Collections.Generic;
 
 namespace DB
 {

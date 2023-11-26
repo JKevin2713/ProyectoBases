@@ -36,7 +36,7 @@ namespace DB
             {
                 connection.Open();
 
-                var query = "CALL VerCalendarios()";
+                var query = "CALL VerCalendarioLaboral()";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     using (var reader = command.ExecuteReader())
@@ -94,6 +94,32 @@ namespace DB
             return departamentos;
         }
 
+        public List<String> VerIdCalendario(String connectionString)
+        {
+            List<String> calendarios = new List<String>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerCalendarioLaboral()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String calendario = reader["idCalendario"].ToString();
+
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
 
         public void ActualizarCalendarioLaboral(CalendarioLaboral calendarioLaboral, String connectionString)
         {

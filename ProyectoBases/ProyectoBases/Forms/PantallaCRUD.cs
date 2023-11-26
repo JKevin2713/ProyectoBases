@@ -25,12 +25,12 @@ namespace ProyectoBases
         String dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8, dato9;
         System.Windows.Forms.CheckBox ck1, ck2, ck3, ck4, ck5, ck6, ck7;
         DateTimePicker datePicker, datePicker2;
-        String[] row;
+        List<String> row = new List<String>();
         String tablaNombre, planta;
         int codigo;
         String connection;
 
-        public PantallaCRUD(String tn, int cd, string[] row, String connectionString)
+        public PantallaCRUD(String tn, int cd, List<String> row, String connectionString)
         {
             InitializeComponent();
             this.tablaNombre = tn;
@@ -313,7 +313,7 @@ namespace ProyectoBases
             cb2.SelectedItem = row[5].Substring(3, 2);
             cb3.SelectedItem = row[6].Substring(0, 2);
             cb4.SelectedItem = row[6].Substring(3, 2);
-            cb5.SelectedItem = row[7];
+            cb5.SelectedIndex = Convert.ToInt32(row[7]);
 
         }
 
@@ -321,7 +321,7 @@ namespace ProyectoBases
         {
             bool error = false;
             CalendarioLaboral c = new CalendarioLaboral();
-            c.IdCalendario = Convert.ToInt32(textBox1.Text);
+           
             c.Nombre = txf1.Text; //nombre
             decimal temp;
             if (decimal.TryParse(txf2.Text, out temp))
@@ -369,7 +369,6 @@ namespace ProyectoBases
         {
             bool error = false;
             CalendarioLaboral c = new CalendarioLaboral();
-            c.IdCalendario = Convert.ToInt32(textBox1.Text);
             c.Nombre = txf1.Text; //nombre
             decimal temp;
             if (decimal.TryParse(txf2.Text, out temp))
@@ -751,7 +750,7 @@ namespace ProyectoBases
             String[] departamento = departamentos.VerNombreDep(connection).ToArray();
             cb3 = new System.Windows.Forms.ComboBox();
             cb3.DropDownStyle = ComboBoxStyle.DropDownList;
-            cb3.Items.AddRange(departamentos);
+            cb3.Items.AddRange(departamento);
             cb3.Location = new Point(190, 405);
             cb3.Size = new Size(200, 22);
             cb3.DropDownHeight = 22 * 5;
@@ -1019,7 +1018,7 @@ namespace ProyectoBases
             else
             {
                 DepartamentoDB db = new DepartamentoDB();
-                db.ActualizarTipoEmpleado(tp, connection);
+                db.ActualizarDepartamento(tp, connection);
             }
 
         }
@@ -1046,7 +1045,7 @@ namespace ProyectoBases
             else
             {
                 DepartamentoDB db = new DepartamentoDB();
-                db.InsertarTipoEmpleado(tp, connection);
+                db.InsertarDepartamento(tp, connection);
             }
         }
 

@@ -15,11 +15,11 @@ namespace ProyectoBases.Forms
     public partial class MarcasCRUD : Form
     {
 
-        String[] row;
+        List<String> row = new List<String>();
         String connection;
         int accion;
 
-        public MarcasCRUD(int Action, String[] row, String ConnectionString)
+        public MarcasCRUD(int Action, List<String> row, String ConnectionString)
         {
             InitializeComponent();
             this.row = row;
@@ -141,7 +141,7 @@ namespace ProyectoBases.Forms
             bool error = false;
 
             Marca m = new Marca();
-
+            int temp;
             //empleaod
             if (int.TryParse(textBox2.Text, out temp))
             {

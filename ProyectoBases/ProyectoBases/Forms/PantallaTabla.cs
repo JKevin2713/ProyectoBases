@@ -19,7 +19,7 @@ namespace ProyectoBases.Forms
         String tablaNombre, Connection, planta;
         List<string[]> datosTabla;
         Button boton1, boton2;
-        String[] row;
+        List<String> row = new List<String>();
         CalendarioLaboralDB calendarioDB = new CalendarioLaboralDB();
         DiasFeriadosDB diasFeriadosDB = new DiasFeriadosDB();
         DiasLaboralesDB diasLaboralesDB = new DiasLaboralesDB();
@@ -228,14 +228,14 @@ namespace ProyectoBases.Forms
                 SelectedRows.Add(r.Cells[0].Value.ToString());
             }
 
-            row = SelectedRows.ToArray();
+            row = SelectedRows;
         }
 
         //----------------------------------------------------------------------------------------
         // CALENDARIO
         private void es_Calendario (){
             label1.Text = "Calendario Laboral";
-            tabla1.ColumnCount = 7;
+            tabla1.ColumnCount = 8;
             tabla1.Name = "CalendarioLaboralTabla";
             tabla1.RowHeadersVisible = true;
 
@@ -246,6 +246,7 @@ namespace ProyectoBases.Forms
             tabla1.Columns[4].Name = "HoraDoble";
             tabla1.Columns[5].Name = "HoraInicio";
             tabla1.Columns[6].Name = "HoraFinal";
+            tabla1.Columns[7].Name = "Horario";
 
             tabla1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tabla1.MultiSelect = false;

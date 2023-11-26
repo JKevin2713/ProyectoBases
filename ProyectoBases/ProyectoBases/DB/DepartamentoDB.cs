@@ -8,7 +8,7 @@ namespace DB
     public class DepartamentoDB
     {
 
-        public void InsertarDepartamento(Departamento departamento)
+        public void InsertarDepartamento(Departamento departamento, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -23,7 +23,7 @@ namespace DB
             }
         }
 
-        public void ActualizarDepartamento(Departamento departamento)
+        public void ActualizarDepartamento(Departamento departamento, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -69,7 +69,34 @@ namespace DB
             return departamentos;
         }
 
-        public void EliminarDepartamento(int idDepartamento)
+        public List<String> VerNombreDep(String connectionString)
+        {
+            List<String> departamentos = new List<String>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerNombreDep()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String departamento = reader["Nombre"].ToString();
+                            
+
+                            departamentos.Add(departamento);
+                        }
+                    }
+                }
+            }
+
+            return departamentos;
+        }
+
+        public void DeleteDepartamento(int idDepartamento, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {

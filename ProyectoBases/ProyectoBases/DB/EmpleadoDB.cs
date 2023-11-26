@@ -1,14 +1,14 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using Model;
+using System.Collections.Generic;
 
 namespace DB
 {
     public class EmpleadoDB
     {
-        private string connectionString = Utils.Constantes.ConnectionString;
 
-        public void InsertarEmpleado(Empleado empleado)
+        public void InsertarEmpleado(Empleado empleado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -30,7 +30,43 @@ namespace DB
             }
         }
 
-        public void ActualizarEmpleado(Empleado empleado)
+        public List<String[]> VerEmpleado(String connectionString)
+        {
+            List<String[]> calendarios = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerEmpleado()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] calendario = new String[]
+                            {
+                                reader["idEmpleado"].ToString(),
+                                reader["nombre"].ToString(),
+                                reader["fecha_ingreso"].ToString(),
+                                reader["fecha_salida"].ToString(),
+                                reader["tipo_empleado_id"].ToString(),
+                                reader["id_calendario"].ToString(),
+                                reader["departamento"].ToString(),
+                                reader["supervisor"].ToString(),
+                                reader["planta"].ToString()
+                            };
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
+        public void ActualizarEmpleado(Empleado empleado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -53,7 +89,7 @@ namespace DB
             }
         }
 
-        public void DeleteEmpleado(int idEmpleado)
+        public void DeleteEmpleado(int idEmpleado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
