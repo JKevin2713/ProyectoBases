@@ -64,6 +64,35 @@ namespace DB
             return calendarios;
         }
 
+        public List<String[]> VerDepartamento(String connectionString)
+        {
+            List<String[]> departamentos = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerDepartamento()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] departamento = new String[]
+                            {
+                                reader["idDepartamento"].ToString(),
+                                reader["Nombre"].ToString()
+                            };
+
+                            departamentos.Add(departamento);
+                        }
+                    }
+                }
+            }
+
+            return departamentos;
+        }
 
 
         public void ActualizarCalendarioLaboral(CalendarioLaboral calendarioLaboral, String connectionString)
