@@ -45,7 +45,7 @@ namespace DB
             }
         }
 
-        public void DeleteMarca(int id)
+        public void DeleteMarca(int id, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -59,5 +59,40 @@ namespace DB
                 }
             }
         }
+
+        public List<String[]> VerMarca(String connectionString)
+        {
+            List<String[]> calendarios = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerMarca()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] calendario = new String[]
+                            {
+                                reader["id"].ToString(),
+                                reader["empleado_id"].ToString(),
+                                reader["fecha"].ToString(),
+                                reader["entrada"].ToString(),
+                                reader["salida"].ToString()
+                               
+                            };
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
+
     }
 }

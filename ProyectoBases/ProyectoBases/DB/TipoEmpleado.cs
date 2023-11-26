@@ -1,14 +1,15 @@
 ﻿using System;
 using MySql.Data.MySqlClient;
 using Model;
+using System.Collections.Generic;
 
 namespace DB
 {
     public class TipoEmpleadoDB
     {
-        private string connectionString = Utils.Constantes.ConnectionString;
+        
 
-        public void InsertarTipoEmpleado(TipoEmpleado tipoEmpleado)
+        public void InsertarTipoEmpleado(TipoEmpleado tipoEmpleado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -24,7 +25,7 @@ namespace DB
         }
 
 
-        public void ActualizarTipoEmpleado(TipoEmpleado tipoEmpleado)
+        public void ActualizarTipoEmpleado(TipoEmpleado tipoEmpleado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -40,7 +41,7 @@ namespace DB
             }
         }
 
-        public void DeleteTipoEmpleado(int idTipo)
+        public void DeleteTipoEmpleado(int idTipo, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))
             {
@@ -54,5 +55,64 @@ namespace DB
                 }
             }
         }
+
+        public List<String[]> VerTipoEmpleado(String connectionString)
+        {
+            List<String[]> calendarios = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerTipoEmpleado()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] calendario = new String[]
+                            {
+                                reader["idTipo"].ToString(),
+                                reader["nombreTipoEmpleado"].ToString()
+                            };
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
+
+        public List<String> VerNombreTipos(String connectionString)
+        {
+            List<String> calendarios = new List<String>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerTipoEmpleado()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String calendario = reader["nombre"].ToString();
+                            
+
+                            calendarios.Add(calendario);
+                        }
+                    }
+                }
+            }
+
+            return calendarios;
+        }
+
+
     }
 }

@@ -16,11 +16,18 @@ namespace ProyectoBases.Forms
     public partial class PantallaTabla : Form
     {
 
-        String tablaNombre, rowId;
+        String tablaNombre, Connection, planta;
         List<string[]> datosTabla;
         Button boton1, boton2;
-        String Connection;
-        CalendarioLaboralDB calendario = new CalendarioLaboralDB();
+        String[] row;
+        CalendarioLaboralDB calendarioDB = new CalendarioLaboralDB();
+        DiasFeriadosDB diasFeriadosDB = new DiasFeriadosDB();
+        DiasLaboralesDB diasLaboralesDB = new DiasLaboralesDB();
+        EmpleadoDB empleadoDB = new EmpleadoDB();
+        MarcaDB marcaDB = new MarcaDB();
+        PlanillasDB planillasDB = new PlanillasDB();
+        TipoEmpleadoDB TipoEmpleadoDB = new TipoEmpleadoDB();
+        DepartamentoDB departamentoDB = new DepartamentoDB();
 
         public PantallaTabla(String tn, String connectionString)
         {
@@ -51,6 +58,9 @@ namespace ProyectoBases.Forms
                     break;
                 case "Planillas":
                     es_Planilla();
+                    break;
+                case "Departamento":
+                    es_Departamento();
                     break;
                 default:
                     // code block
@@ -92,57 +102,80 @@ namespace ProyectoBases.Forms
                 case "Planillas":
                     actualizar_Planilla();
                     break;
+                case "Departamento":
+                    actualizar_Departamento();
+                    break;
                 default:
                     // code block
                     break;
             }
         }
 
+        //Insertar -> Insert
         private void button1_Click(object sender, EventArgs e)
         {
-           
-            PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 1, rowId, Connection);
-            insertarCalendario.Show();
+            if (tablaNombre == "Marcas")
+            {
+                MarcasCRUD insertarMarca = new MarcasCRUD(2, row, Connection);
+                insertarMarca.Show();
+            }
+            else
+            {
+                PantallaCRUD insertarTabla = new PantallaCRUD(tablaNombre, 1, row, Connection);
+                insertarTabla.plantaNombre(planta);
+                insertarTabla.Show();
+            }
         }
 
         
-
+        //Editar -> Update
         private void button2_Click(object sender, EventArgs e)
         {
             getSelectedItem();
-            PantallaCRUD insertarCalendario = new PantallaCRUD(tablaNombre, 2, rowId, Connection);
-            insertarCalendario.Show();
-            actualizarTabla();
-
+            if (tablaNombre == "Marcas")
+            {
+                MarcasCRUD insertarMarca = new MarcasCRUD(1, row, Connection);
+                insertarMarca.Show();
+            }
+            else
+            {
+                PantallaCRUD editarTabla = new PantallaCRUD(tablaNombre, 2, row, Connection);
+                editarTabla.plantaNombre(planta);
+                editarTabla.Show();
+            }
+            
         }
 
+        //Eliminar
         private void button3_Click(object sender, EventArgs e)
-        {   //ELIMINAR
+        {   
             getSelectedItem();
             String respuestaSP = "";
             switch (tablaNombre)
             {   
                 case "Calendario":
-  
-                    EliminarCalendario();
+                    eliminar_Calendario();
                     break;
                 case "Feriados":
-                    // code block
+                    eliminar_Feriados();
                     break;
                 case "DiasLaborales":
-                    // code block
+                    eliminar_Laborales();
                     break;
                 case "Empleados":
-                    // code block
+                    eliminar_Empleados();
                     break;
                 case "TiposEmpleados":
-                    // code block
+                    eliminar_TipoEmpleado();
                     break;
                 case "Marcas":
-                    // code block
+                    eliminar_Marcas();
                     break;
                 case "Planillas":
-                    // code block
+                    eliminar_Planilla();
+                    break;
+                case "Departamento":
+                    eliminar_Departamento();
                     break;
                 default:
                     // code block
@@ -151,6 +184,7 @@ namespace ProyectoBases.Forms
             MessageBox.Show(respuestaSP);
         }
 
+        //MARCAS Y PLANILLAS
         private void boton1_Click(object sender, EventArgs e)
         {
             switch (tablaNombre)
@@ -186,7 +220,6 @@ namespace ProyectoBases.Forms
 
         //----------------------------------------------------------------------------------------
 
-
         private void getSelectedItem()
         {
             List<string> SelectedRows = new List<string>();
@@ -195,7 +228,7 @@ namespace ProyectoBases.Forms
                 SelectedRows.Add(r.Cells[0].Value.ToString());
             }
 
-            rowId = (SelectedRows[0]);
+            row = SelectedRows.ToArray();
         }
 
         //----------------------------------------------------------------------------------------
@@ -220,16 +253,17 @@ namespace ProyectoBases.Forms
 
         }
 
-        private void EliminarCalendario()
+        private void eliminar_Calendario()
         {
-            int idE = Convert.ToInt32(rowId);
-            calendario.DeleteCalendarioLaboral(idE, Connection);
+            int idE = Convert.ToInt32(row[0]);
+            calendarioDB.DeleteCalendarioLaboral(idE, Connection);
         }
+
         private void actualizar_Calendario()
         {
             tabla1.Rows.Clear();
             
-            datosTabla = calendario.VerCalendarioLaboral(Connection);
+            datosTabla = calendarioDB.VerCalendarioLaboral(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)
@@ -259,16 +293,17 @@ namespace ProyectoBases.Forms
             tabla1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        private void eliminar_Feriados()
+        {
+            int idE = Convert.ToInt32(row[0]);
+            diasFeriadosDB.DeleteDiaFeriado(idE, Connection);
+        }
+
         private void actualizar_Feriados()
         {
             tabla1.Rows.Clear();
-            datosTabla = new List<string[]>();
 
-            String[] one = { "1", "1", "10/11/2025", "Pago"}; //
-            for (int i = 0; i < 30; i++)
-            {
-                datosTabla.Add(one);
-            }
+            datosTabla = diasFeriadosDB.VerDiasFeriados(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)
@@ -300,16 +335,16 @@ namespace ProyectoBases.Forms
             tabla1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        private void eliminar_Laborales()
+        {
+            int idE = Convert.ToInt32(row[0]);
+            diasLaboralesDB.DeleteDiasLaborales(idE, Connection);
+        }
+
         private void actualizar_Laborales()
         {
             tabla1.Rows.Clear();
-            datosTabla = new List<string[]>();
-
-            String[] one = { "1", "Y", "Y", "Y", "Y", "Y", "N", "N" }; //
-            for (int i = 0; i < 30; i++)
-            {
-                datosTabla.Add(one);
-            }
+            datosTabla = diasLaboralesDB.VerDiasLaborales(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)
@@ -318,7 +353,6 @@ namespace ProyectoBases.Forms
             }
 
         }
-
 
         //----------------------------------------------------------------------------------------
         //EMPLEADOS
@@ -345,16 +379,16 @@ namespace ProyectoBases.Forms
             tabla1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        private void eliminar_Empleados()
+        {
+            int idE = Convert.ToInt32(row[0]);
+            empleadoDB.DeleteEmpleado(idE, Connection);
+        }
+
         private void actualizar_Empleados()
         {
             tabla1.Rows.Clear();
-            datosTabla = new List<string[]>();
-
-            String[] one = { "1", "1", "10/11/2025", "Pago", "1", "1", "1", "10/11/2025", "Pago" }; //
-            for (int i = 0; i < 30; i++)
-            {
-                datosTabla.Add(one);
-            }
+            datosTabla = empleadoDB.VerEmpleado(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)
@@ -382,16 +416,52 @@ namespace ProyectoBases.Forms
             tabla1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
         }
 
+        private void eliminar_TipoEmpleado()
+        {
+            int idE = Convert.ToInt32(row[0]);
+            TipoEmpleadoDB.DeleteTipoEmpleado(idE, Connection);
+        }
+
         private void actualizar_TipoEmpleado()
         {
             tabla1.Rows.Clear();
-            datosTabla = new List<string[]>();
+            datosTabla = TipoEmpleadoDB.VerTipoEmpleado(Connection);
 
-            String[] one = { "1", "1", "10/11/2025", "Pago" }; //
-            for (int i = 0; i < 30; i++)
+            int rows = datosTabla.Count;
+            for (int i = 0; i < rows; i++)
             {
-                datosTabla.Add(one);
+                tabla1.Rows.Add(datosTabla[i]);
             }
+
+        }
+
+        //----------------------------------------------------------------------------------------
+        //DEPARTAMENTO
+        private void es_Departamento()
+        {
+            label1.Text = "Departamento";
+            tabla1.ColumnCount = 2;
+            tabla1.Name = "Departamento";
+            tabla1.RowHeadersVisible = true;
+
+            tabla1.Columns[0].Name = "idDepartamento";
+            tabla1.Columns[1].Name = "Nombre";
+
+            tabla1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            tabla1.MultiSelect = false;
+            tabla1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+        }
+
+        private void eliminar_Departamento()
+        {
+            int idE = Convert.ToInt32(row[0]);
+            departamentoDB.DeleteDepartamento(idE, Connection);
+        }
+
+        private void actualizar_Departamento()
+        {
+            tabla1.Rows.Clear();
+            datosTabla = departamentoDB.VerDepartamento(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)
@@ -442,16 +512,16 @@ namespace ProyectoBases.Forms
             button4.Location = new Point(60, 5);
         }
 
+        private void eliminar_Marcas()
+        {
+            int idE = Convert.ToInt32(row[0]);
+            marcaDB.DeleteMarca(idE, Connection);
+        }
+
         private void actualizar_Marcas()
         {
             tabla1.Rows.Clear();
-            datosTabla = new List<string[]>();
-
-            String[] one = { "1", "caledariouno", "5", "6", "7", "9 am", "10am" }; //
-            for (int i = 0; i < 30; i++)
-            {
-                datosTabla.Add(one);
-            }
+            datosTabla = marcaDB.VerMarca(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)
@@ -466,16 +536,17 @@ namespace ProyectoBases.Forms
         private void es_Planilla()
         {
             label1.Text = "Planilla";
-            tabla1.ColumnCount = 6;
+            tabla1.ColumnCount = 7;
             tabla1.Name = "planilla";
             tabla1.RowHeadersVisible = true;
 
             tabla1.Columns[0].Name = "Id";
             tabla1.Columns[1].Name = "Empleado";
-            tabla1.Columns[2].Name = "Estado";
-            tabla1.Columns[3].Name = "Salario Bruto";
-            tabla1.Columns[4].Name = "Salario Neto";
-            tabla1.Columns[5].Name = "Porcentaje Obligaciones";
+            tabla1.Columns[2].Name = "Planta";
+            tabla1.Columns[3].Name = "Estado";
+            tabla1.Columns[4].Name = "Salario Bruto";
+            tabla1.Columns[5].Name = "Salario Neto";
+            tabla1.Columns[6].Name = "Porcentaje Obligaciones";
 
             tabla1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tabla1.MultiSelect = false;
@@ -501,16 +572,16 @@ namespace ProyectoBases.Forms
             button4.Location = new Point(60, 5);
         }
 
+        private void eliminar_Planilla()
+        {
+            int idE = Convert.ToInt32(row[0]);
+            planillasDB.DeletePlanilla(idE, Connection);
+        }
+
         private void actualizar_Planilla()
         {
             tabla1.Rows.Clear();
-            datosTabla = new List<string[]>();
-
-            String[] one = { "1", "caledariouno", "5", "6", "7", "9 am", "10am" }; //
-            for (int i = 0; i < 30; i++)
-            {
-                datosTabla.Add(one);
-            }
+            datosTabla = planillasDB.VerPlanilla(Connection);
 
             int rows = datosTabla.Count;
             for (int i = 0; i < rows; i++)
@@ -522,9 +593,16 @@ namespace ProyectoBases.Forms
 
 
 
-
-
         //----------------------------------------------------------------------------------------
+
+        public void plantaNombre(String nombre)
+        {
+            this.planta = nombre;
+        }
+
+     
+
+         //----------------------------------------------------------------------------------------
         private void tabla1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
            
