@@ -184,5 +184,10 @@ namespace ProyectoBases.Forms
                 insertar_marca();
             }
         }
+
+        private void MarcasCRUD_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

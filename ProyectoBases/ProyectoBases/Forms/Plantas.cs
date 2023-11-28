@@ -47,6 +47,7 @@ namespace ProyectoBases
         private void button1_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Calendario", connectionstring);
+            abrirplanta.plantaNombre(nombre);
             abrirplanta.Show();
         }
 
@@ -54,6 +55,7 @@ namespace ProyectoBases
         private void button2_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Feriados", connectionstring);
+            abrirplanta.plantaNombre(nombre);
             abrirplanta.Show();
         }
 
@@ -61,12 +63,14 @@ namespace ProyectoBases
         private void button3_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("DiasLaborales", connectionstring);
+            abrirplanta.plantaNombre(nombre);
             abrirplanta.Show();
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Empleados", connectionstring);
+            abrirplanta.plantaNombre(nombre);
             abrirplanta.Show();
 
         }
@@ -74,6 +78,7 @@ namespace ProyectoBases
         private void button5_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("TiposEmpleados", connectionstring);
+            abrirplanta.plantaNombre(nombre);
             abrirplanta.Show();
         }
 
@@ -81,6 +86,7 @@ namespace ProyectoBases
         private void BtnMarcas_Click(object sender, EventArgs e)
         {
             PantallaTabla abrirplanta = new PantallaTabla("Marcas", connectionstring);
+            abrirplanta.plantaNombre(nombre);
             abrirplanta.Show();
         }
 

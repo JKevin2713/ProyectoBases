@@ -14,7 +14,7 @@ namespace Model
         public DateTime FechaSalida { get; set; }
         public int TipoEmpleadoId { get; set; }
         public int IdCalendario { get; set; }
-        public string Departamento { get; set; }
+        public int Departamento { get; set; }
         public int Supervisor { get; set; }
         public int Planta { get; set; }
     }

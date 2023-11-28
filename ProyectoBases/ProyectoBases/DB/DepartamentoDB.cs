@@ -39,6 +39,48 @@ namespace DB
             }
         }
 
+        public String BuscarNombreDepartamento(int departamento, String connectionString)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL BuscarNombreDepartamento(@idDepartamento)";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idDepartamento", departamento);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            return reader["Nombre"].ToString();
+                        }
+                        return "";
+                    }
+                }
+            }
+        }
+        public int BuscarIdDepartamento(String departamento, String connectionString)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL BuscarIdDepartamento(@nombreTipoEmpleado)";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@nombreTipoEmpleado", departamento);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            return Convert.ToInt32(reader["idDepartamento"]);
+                        }
+                        return 0;
+                    }
+                }
+            }
+        }
         public List<String[]> VerDepartamento(String connectionString)
         {
             List<String[]> departamentos = new List<String[]>();

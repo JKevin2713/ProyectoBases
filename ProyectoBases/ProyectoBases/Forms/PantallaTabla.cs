@@ -122,6 +122,7 @@ namespace ProyectoBases.Forms
             else
             {
                 PantallaCRUD insertarTabla = new PantallaCRUD(tablaNombre, 1, row, Connection);
+                MessageBox.Show(planta);
                 insertarTabla.plantaNombre(planta);
                 insertarTabla.Show();
             }
@@ -206,9 +207,6 @@ namespace ProyectoBases.Forms
         {
             switch (tablaNombre)
             {
-                case "Marcas": // APROBAR MARCAS
-                    // code block
-                    break;
                 case "Planillas":
                     // code block
                     break;
@@ -225,9 +223,11 @@ namespace ProyectoBases.Forms
             List<string> SelectedRows = new List<string>();
             foreach (DataGridViewRow r in tabla1.SelectedRows)
             {
-                SelectedRows.Add(r.Cells[0].Value.ToString());
+                for (int i = 0; i < r.Cells.Count; i++)
+                {
+                    SelectedRows.Add(r.Cells[i].Value.ToString());
+                }
             }
-
             row = SelectedRows;
         }
 
@@ -478,7 +478,7 @@ namespace ProyectoBases.Forms
         private void es_Marcas()
         {
             label1.Text = "Marcas Empleados";
-            tabla1.ColumnCount = 6;
+            tabla1.ColumnCount = 5;
             tabla1.Name = "marcas";
             tabla1.RowHeadersVisible = true;
 
@@ -487,7 +487,6 @@ namespace ProyectoBases.Forms
             tabla1.Columns[2].Name = "Fecha";
             tabla1.Columns[3].Name = "Entrada";
             tabla1.Columns[4].Name = "Salida";
-            tabla1.Columns[5].Name = "Aprobado";
 
             tabla1.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             tabla1.MultiSelect = false;
@@ -500,16 +499,8 @@ namespace ProyectoBases.Forms
             boton1.Click += boton1_Click;
             panel3.Controls.Add(boton1);
 
-            boton2 = new Button();
-            boton2.Text = "Aprobar * marcas";
-            boton2.Location = new Point(60, 355);
-            boton2.Size = new Size(128, 45);
-            boton2.Click += boton2_Click;
-            panel3.Controls.Add(boton2);
-
             button1.Location = new Point(60, 75);
-            button2.Location = new Point(60, 145);
-            button3.Location = new Point(60, 215);
+            button3.Location = new Point(60, 145);
             button4.Location = new Point(60, 5);
         }
 
@@ -589,6 +580,11 @@ namespace ProyectoBases.Forms
             {
                 tabla1.Rows.Add(datosTabla[i]);
             }
+
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
 
         }
 

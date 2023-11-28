@@ -29,6 +29,7 @@ namespace ProyectoBases
         String tablaNombre, planta;
         int codigo;
         String connection;
+        EmpleadoDB empleadoDB = new EmpleadoDB();
 
         public PantallaCRUD(String tn, int cd, List<String> row, String connectionString)
         {
@@ -55,6 +56,13 @@ namespace ProyectoBases
                     if (codigo == 2)
                     {
                         formato_Feriado();
+                    }
+                    break;
+                case "Departamento":
+                    es_Departamento();
+                    if (codigo == 2)
+                    {
+                        formato_Departamento();
                     }
                     break;
                 case "DiasLaborales":
@@ -313,7 +321,7 @@ namespace ProyectoBases
             cb2.SelectedItem = row[5].Substring(3, 2);
             cb3.SelectedItem = row[6].Substring(0, 2);
             cb4.SelectedItem = row[6].Substring(3, 2);
-            cb5.SelectedIndex = Convert.ToInt32(row[7]);
+            cb5.SelectedIndex = Convert.ToInt32(row[7]) - 1;
 
         }
 
@@ -321,7 +329,7 @@ namespace ProyectoBases
         {
             bool error = false;
             CalendarioLaboral c = new CalendarioLaboral();
-           
+            c.IdCalendario = Convert.ToInt32(row[0]);
             c.Nombre = txf1.Text; //nombre
             decimal temp;
             if (decimal.TryParse(txf2.Text, out temp))
@@ -350,8 +358,8 @@ namespace ProyectoBases
             {
                 
             }
-            c.HoraInicio = cb1.SelectedIndex * 10000 + cb2.SelectedIndex; //horaInicio
-            c.HoraFinal = cb3.SelectedIndex * 10000 + cb4.SelectedIndex; //horaFin
+            c.HoraInicio = cb1.SelectedIndex * 10000 + cb2.SelectedIndex * 100; //horaInicio
+            c.HoraFinal = cb3.SelectedIndex * 10000 + cb4.SelectedIndex * 100; //horaFin
             c.TipoPago = cb5.SelectedIndex + 1; //pago
 
             if (error)
@@ -361,6 +369,7 @@ namespace ProyectoBases
             else
             {
                 CalendarioLaboralDB calendario = new CalendarioLaboralDB();
+                MessageBox.Show(calendario.ToString());
                 calendario.ActualizarCalendarioLaboral(c, connection);
             }
         }
@@ -724,8 +733,10 @@ namespace ProyectoBases
             this.Controls.Add(datePicker2);
 
             //cb1 = tipos empleado  ->  GET ALL TiposEmpleados
-            TipoEmpleadoDB tipoEmpleadoDB = new TipoEmpleadoDB();
-            String[] tiposEmpleados = tipoEmpleadoDB.VerNombreTipos(connection).ToArray();
+          
+            TipoEmpleadoDB tipoEmpleado = new TipoEmpleadoDB();
+            String[] tiposEmpleados = tipoEmpleado.VerNombreTipos(connection).ToArray();
+          
             cb1 = new System.Windows.Forms.ComboBox();
             cb1.DropDownStyle = ComboBoxStyle.DropDownList;
             cb1.Items.AddRange(tiposEmpleados);
@@ -733,6 +744,7 @@ namespace ProyectoBases
             cb1.Size = new Size(200, 22);
             cb1.DropDownHeight = 22 * 5;
             this.Controls.Add(cb1);
+      
 
             //cb2 = id calendario ->  GET ALL CalendarioNums
             CalendarioLaboralDB calendarioLaboralDB = new CalendarioLaboralDB();
@@ -787,7 +799,10 @@ namespace ProyectoBases
             int temp;
             if (int.TryParse(row[4], out temp))
             {
-                cb1.SelectedIndex = temp;
+                TipoEmpleadoDB TipoEmpleadoDB = new TipoEmpleadoDB();
+                int TipoEmpleado = temp;
+                String TipoEmpleadoId = TipoEmpleadoDB.BuscarNombreTipo(TipoEmpleado, connection);
+                cb1.SelectedItem = TipoEmpleadoId;
             }
             //Id Calendario
             if (int.TryParse(row[5], out temp))
@@ -797,7 +812,11 @@ namespace ProyectoBases
             //Id Departamento
             if (int.TryParse(row[6], out temp))
             {
-                cb3.SelectedIndex = temp;
+
+                DepartamentoDB DepartamentoDB2 = new DepartamentoDB();
+                int departamentoDB = temp;
+                String DepartamentoDB = DepartamentoDB2.BuscarNombreDepartamento(departamentoDB, connection);
+                cb3.SelectedItem = DepartamentoDB;
             }
             //Id Supervisor
             txf4.Text = row[7];
@@ -808,20 +827,51 @@ namespace ProyectoBases
         {
             bool error = false;
             Empleado e = new Empleado();
+            TipoEmpleadoDB TipoEmpleadoDB = new TipoEmpleadoDB();
+            CalendarioLaboralDB CalendarioDB = new CalendarioLaboralDB();
+            DepartamentoDB DepartamentoDB = new DepartamentoDB();
+
+            e.IdEmpleado = Convert.ToInt32(row[0]);
             e.Nombre = txf1.Text;
             e.FechaIngreso = datePicker.Value;
             e.FechaSalida = datePicker2.Value;
-            e.TipoEmpleadoId = cb1.SelectedIndex;
-            e.IdCalendario = cb2.SelectedIndex;
-            e.Departamento = cb3.SelectedItem.ToString();
+
+            String TipoEmpleado = cb1.SelectedItem.ToString();
+            int TipoEmpleadoId = TipoEmpleadoDB.BuscarIdTipo(TipoEmpleado, connection);
+            e.TipoEmpleadoId = TipoEmpleadoId;
+
+            String Calendario = cb2.SelectedItem.ToString();
+            //int CalendarioId = BuscarIdCalendario(Calendario, connection);
+            e.IdCalendario = Convert.ToInt32(Calendario);
+
+            String Departamento = cb3.SelectedItem.ToString();
+            int DepartamentoId = DepartamentoDB.BuscarIdDepartamento(Departamento, connection);
+            e.Departamento = DepartamentoId;
+
             int temp;
             if (int.TryParse(txf4.Text, out temp))
             {
                 e.Supervisor = temp;
             }
+            else if (txf4.Text == "")
+            {
+                e.Supervisor = 0;
+            }
             else
             {
                 error = true;
+            }
+            switch (planta)
+            {
+                case "Guayabo":
+                    e.Planta = 1;
+                    break;
+                case "Central":
+                    e.Planta = 2;
+                    break;
+                case "La Romana":
+                    e.Planta = 3;
+                    break;
             }
             if (error)
             {
@@ -831,27 +881,59 @@ namespace ProyectoBases
             {
                 EmpleadoDB empleadoDB = new EmpleadoDB();
                 empleadoDB.ActualizarEmpleado(e, connection);
-            } 
+            }
+
         }
 
         public void insertar_empleado()
         {
             bool error = false;
             Empleado e = new Empleado();
+            TipoEmpleadoDB TipoEmpleadoDB = new TipoEmpleadoDB();
+            CalendarioLaboralDB CalendarioDB = new CalendarioLaboralDB();
+            DepartamentoDB DepartamentoDB = new DepartamentoDB();
+
+
             e.Nombre = txf1.Text;
             e.FechaIngreso = datePicker.Value;
             e.FechaSalida = datePicker2.Value;
-            e.TipoEmpleadoId = cb1.SelectedIndex;
-            e.IdCalendario = cb2.SelectedIndex;
-            e.Departamento = cb3.SelectedItem.ToString();
+
+            String TipoEmpleado = cb1.SelectedItem.ToString();
+            int TipoEmpleadoId = TipoEmpleadoDB.BuscarIdTipo(TipoEmpleado, connection);
+            e.TipoEmpleadoId = TipoEmpleadoId;
+
+            String Calendario = cb2.SelectedItem.ToString();
+            //int CalendarioId = BuscarIdCalendario(Calendario, connection);
+            e.IdCalendario = Convert.ToInt32(Calendario);
+
+            String Departamento = cb3.SelectedItem.ToString();
+            int DepartamentoId = DepartamentoDB.BuscarIdDepartamento(Departamento, connection);
+            e.Departamento = DepartamentoId;
+
             int temp;
             if (int.TryParse(txf4.Text, out temp))
             {
                 e.Supervisor = temp;
             }
+            else if (txf4.Text == "")
+            {
+                e.Supervisor = 0;
+            }
             else
             {
                 error = true;
+            }
+            switch (planta)
+            {
+                case "Guayabo":
+                    e.Planta = 1;
+                    break;
+                case "Central":
+                    e.Planta = 2;
+                    break;
+                case "La Romana":
+                    e.Planta = 3;
+                    break;
             }
             if (error)
             {
@@ -906,55 +988,22 @@ namespace ProyectoBases
 
         public void editar_tipoEmpleado()
         {
-            bool error = false;
             TipoEmpleado tp = new TipoEmpleado();
+            tp.IdTipo = Convert.ToInt32(row[0]);
             tp.NombreTipoEmpleado = txf1.Text;
-            
-            int temp;
-            if (int.TryParse(textBox1.Text, out temp))
-            {
-                tp.IdTipo = temp;
-            }
-            else
-            {
-                error = true;
-            }
-            if (error)
-            {
-                MessageBox.Show("Tipo de dato incorrecto");
-            }
-            else
-            {
-                TipoEmpleadoDB db = new TipoEmpleadoDB();
-                db.ActualizarTipoEmpleado(tp, connection);
-            }
-            
+
+            TipoEmpleadoDB db = new TipoEmpleadoDB();
+            db.ActualizarTipoEmpleado(tp, connection);    
         }
 
         public void insertar_tipoEmpleado()
         {
-            bool error = false;
             TipoEmpleado tp = new TipoEmpleado();
             tp.NombreTipoEmpleado = txf1.Text;
 
-            int temp;
-            if (int.TryParse(textBox1.Text, out temp))
-            {
-                tp.IdTipo = temp;
-            }
-            else
-            {
-                error = true;
-            }
-            if (error)
-            {
-                MessageBox.Show("Tipo de dato incorrecto");
-            }
-            else
-            {
-                TipoEmpleadoDB db = new TipoEmpleadoDB();
-                db.InsertarTipoEmpleado(tp, connection);
-            }
+            TipoEmpleadoDB db = new TipoEmpleadoDB();
+            db.InsertarTipoEmpleado(tp, connection);
+            
         }
 
 
@@ -998,55 +1047,22 @@ namespace ProyectoBases
 
         public void editar_Departamento()
         {
-            bool error = false;
-            Departamento tp = new Departamento();
-            tp.Nombre = txf1.Text;
+            Departamento d = new Departamento();
+            d.IdDepartamento = Convert.ToInt32(row[0]);
+            d.Nombre = txf1.Text;
 
-            int temp;
-            if (int.TryParse(textBox1.Text, out temp))
-            {
-                tp.IdDepartamento = temp;
-            }
-            else
-            {
-                error = true;
-            }
-            if (error)
-            {
-                MessageBox.Show("Tipo de dato incorrecto");
-            }
-            else
-            {
-                DepartamentoDB db = new DepartamentoDB();
-                db.ActualizarDepartamento(tp, connection);
-            }
+            DepartamentoDB db = new DepartamentoDB();
+            db.ActualizarDepartamento(d, connection);
 
         }
 
         public void insertar_Departamento()
         {
-            bool error = false;
-            Departamento tp = new Departamento();
-            tp.Nombre = txf1.Text;
-
-            int temp;
-            if (int.TryParse(textBox1.Text, out temp))
-            {
-                tp.IdDepartamento = temp;
-            }
-            else
-            {
-                error = true;
-            }
-            if (error)
-            {
-                MessageBox.Show("Tipo de dato incorrecto");
-            }
-            else
-            {
-                DepartamentoDB db = new DepartamentoDB();
-                db.InsertarDepartamento(tp, connection);
-            }
+            Departamento d = new Departamento();
+            d.Nombre = txf1.Text;
+            DepartamentoDB db = new DepartamentoDB();
+            db.InsertarDepartamento(d, connection);
+            
         }
 
 
@@ -1123,10 +1139,11 @@ namespace ProyectoBases
             bool error = false;
             Planillas pl = new Planillas(); 
             //id empleado
-            int temp;
-            if (int.TryParse(txf1.Text, out temp))
+            pl.IdPlanilla = Convert.ToInt32(row[0]);
+            int temp2;
+            if (int.TryParse(txf1.Text, out temp2))
             {
-               pl.IdEmpleado = temp;
+               pl.IdEmpleado = temp2;
             }
             else
             {
@@ -1147,8 +1164,9 @@ namespace ProyectoBases
             }            
             //estado
             pl.Estado = ck1.Checked;
+            decimal temp;
             //salariobruto
-            if (int.TryParse(txf2.Text, out temp))
+            if (decimal.TryParse(txf2.Text, out temp))
             {
                 pl.SalarioBruto = temp;
             }
@@ -1157,7 +1175,7 @@ namespace ProyectoBases
                 error = true;
             }
             //salarioneto
-            if (int.TryParse(txf3.Text, out temp))
+            if (decimal.TryParse(txf3.Text, out temp))
             {
                 pl.SalarioNeto = temp;
             }
@@ -1166,7 +1184,7 @@ namespace ProyectoBases
                 error = true;
             }
             //porcentaje obl
-            if (int.TryParse(txf4.Text, out temp))
+            if (decimal.TryParse(txf4.Text, out temp))
             {
                 pl.PorcentajeObligaciones = temp;
             }
@@ -1215,28 +1233,30 @@ namespace ProyectoBases
             }
             //estado
             pl.Estado = ck1.Checked;
+            decimal temp2;
             //salariobruto
-            if (int.TryParse(txf2.Text, out temp))
+            if (decimal.TryParse(txf2.Text, out temp2))
             {
-                pl.SalarioBruto = temp;
+                pl.SalarioBruto = temp2;
             }
             else
             {
                 error = true;
             }
             //salarioneto
-            if (int.TryParse(txf3.Text, out temp))
+            if (decimal.TryParse(txf3.Text, out temp2))
             {
-                pl.SalarioNeto = temp;
+                pl.SalarioNeto = temp2;
             }
             else
             {
                 error = true;
             }
+            
             //porcentaje obl
-            if (int.TryParse(txf4.Text, out temp))
+            if (decimal.TryParse(txf4.Text, out temp2))
             {
-                pl.PorcentajeObligaciones = temp;
+                pl.PorcentajeObligaciones = temp2;
             }
             else
             {

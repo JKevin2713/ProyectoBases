@@ -23,7 +23,14 @@ namespace DB
                     command.Parameters.AddWithValue("@tipo_empleado_id", empleado.TipoEmpleadoId);
                     command.Parameters.AddWithValue("@id_calendario", empleado.IdCalendario);
                     command.Parameters.AddWithValue("@departamento", empleado.Departamento);
-                    command.Parameters.AddWithValue("@supervisor", empleado.Supervisor);
+                    if(empleado.Supervisor == 0)
+                    {
+                        command.Parameters.AddWithValue("@supervisor", null);
+                    }
+                    else
+                    {
+                        command.Parameters.AddWithValue("@supervisor", empleado.Supervisor);
+                    }
                     command.Parameters.AddWithValue("@planta", empleado.Planta);
                     command.ExecuteNonQuery();
                 }

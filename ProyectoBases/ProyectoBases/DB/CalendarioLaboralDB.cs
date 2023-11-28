@@ -45,14 +45,14 @@ namespace DB
                         {
                             String[] calendario = new String[]
                             {
-                        reader["idCalendario"].ToString(),
-                        reader["Nombre"].ToString(),
-                        reader["PagoHora"].ToString(),
-                        reader["PagoHoraExtra"].ToString(),
-                        reader["PagoHoraDoble"].ToString(),
-                        reader["HoraInicio"].ToString(),
-                        reader["HoraFinal"].ToString(),
-                        reader["tipoPago"].ToString()
+                                reader["idCalendario"].ToString(),
+                                reader["Nombre"].ToString(),
+                                reader["PagoHora"].ToString(),
+                                reader["PagoHoraExtra"].ToString(),
+                                reader["PagoHoraDoble"].ToString(),
+                                reader["HoraInicio"].ToString(),
+                                reader["HoraFinal"].ToString(),
+                                reader["tipoPago"].ToString()
                             };
 
                             calendarios.Add(calendario);
@@ -64,6 +64,32 @@ namespace DB
             return calendarios;
         }
 
+
+        public int BuscarIdCalendario(String calendario, String connectionString)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL BuscarIdCalendario(@nombreTipoEmpleado)";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        if (reader.Read())
+                        {
+                            command.Parameters.AddWithValue("@Nombre", calendario);
+                            command.ExecuteNonQuery();
+                            return Convert.ToInt32(reader["@idCalendario"]);
+                        }
+                        else
+                        {
+                            return 0;
+                        }
+                    }
+                }
+            }
+        }
         public List<String[]> VerDepartamento(String connectionString)
         {
             List<String[]> departamentos = new List<String[]>();
@@ -140,6 +166,7 @@ namespace DB
                     command.Parameters.AddWithValue("@tipoPago", calendarioLaboral.TipoPago);
                     command.ExecuteNonQuery();
                 }
+                connection.Close();
             }
         }
 

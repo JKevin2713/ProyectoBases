@@ -105,7 +105,7 @@
     <Compile Include="DB\EmpleadoDB.cs" />
     <Compile Include="DB\MarcaDB.cs" />
     <Compile Include="DB\PlanillasDB.cs" />
-    <Compile Include="DB\TipoEmpleado.cs" />
+    <Compile Include="DB\TipoEmpleadoBD.cs" />
     <Compile Include="DB\TipoPago.cs" />
     <Compile Include="Forms\Corporacion.cs">
       <SubType>Form</SubType>
