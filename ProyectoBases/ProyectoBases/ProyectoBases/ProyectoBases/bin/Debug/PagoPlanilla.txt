@@ -1,0 +1,15 @@
+PAGO DE PLANILLA
+=================
+
+ID Pago: 6
+ID Empleado: 7
+Empleado: María López
+ID Calendario: 2
+Calendario: Calendario 1
+Departamento: Contabilidad
+Fecha de Ingreso: 15/2/2023 00:00:00
+Fecha de Salida: 31/12/2023 00:00:00
+Hora de Inicio: 9
+Hora Final: 18
+Planta: La Romana
+
