@@ -191,7 +191,7 @@ namespace ProyectoBases.Forms
             switch (tablaNombre)
             {
                 case "Marcas": //GENERAR MARCAS
-                    SimuladorMarcas a = new SimuladorMarcas();
+                    SimuladorMarcas a = new SimuladorMarcas(Connection);
                     a.Show();
                     break;
                 case "Planillas":

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using DB;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -10,9 +11,11 @@ namespace ProyectoBases.Forms
 {
     public partial class SimuladorMarcas : Form
     {
-        public SimuladorMarcas()
+        String connection;
+        public SimuladorMarcas(String connection)
         {
             InitializeComponent();
+            this.connection = connection;
             formatearCampos();
         }
 
@@ -22,15 +25,16 @@ namespace ProyectoBases.Forms
             dtp1.Format = DateTimePickerFormat.Short;
             dtp2.Format = DateTimePickerFormat.Short;
             dtp3.Format = DateTimePickerFormat.Time;
+            dateTimePicker1.Format = DateTimePickerFormat.Time;
             dtp2.Enabled = false;
             dtp3.ShowUpDown = true;
-
-            String[] horario = { "Ingreso", "Salida" };
-            cb1.Items.AddRange(horario);
+            dateTimePicker1.ShowUpDown = true;
 
             //GET FROM SQL
-            String[] calendarios = { "1", "1" };
-            cb2.Items.AddRange(calendarios);
+
+            CalendarioLaboralDB calendarioLaboralDB = new CalendarioLaboralDB();
+            String[] calendario = calendarioLaboralDB.VerIdCalendario(connection).ToArray();
+            cb2.Items.AddRange(calendario);
         }
 
 
@@ -52,7 +56,7 @@ namespace ProyectoBases.Forms
                 dato2 = dtp1.ToString(); //misma fecha
             }
             dato3 = dtp3.ToString();
-            dato4 = cb1.SelectedItem.ToString();
+            dato4 = dateTimePicker1.ToString();
             dato5 = textBox1.Text;
             dato6 = textBox2.Text;
             dato7 = textBox3.Text;
@@ -66,6 +70,21 @@ namespace ProyectoBases.Forms
 
 
         private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void SimuladorMarcas_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
         }

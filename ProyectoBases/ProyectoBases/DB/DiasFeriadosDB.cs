@@ -14,7 +14,7 @@ namespace DB
             {
                 connection.Open();
 
-                var query = "CALL InsertarDiaFeriado(@IdDia, @IdCalendario, @Fecha, @Etiqueta)";
+                var query = "CALL InsertarDiasFeriados(@IdDia, @IdCalendario, @Fecha, @Etiqueta)";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@IdDia", diaFeriado.IdDia);
@@ -33,7 +33,7 @@ namespace DB
             {
                 connection.Open();
 
-                var query = "CALL VerDiaFeriado()";
+                var query = "CALL VerDiasFeriados()";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     using (var reader = command.ExecuteReader())
@@ -63,7 +63,7 @@ namespace DB
             {
                 connection.Open();
 
-                var query = "CALL ActualizarDiaFeriado(@IdDia, @IdCalendario, @Fecha, @Etiqueta)";
+                var query = "CALL ActualizarDiasFeriados(@IdDia, @IdCalendario, @Fecha, @Etiqueta)";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@IdDia", diaFeriado.IdDia);
@@ -81,7 +81,7 @@ namespace DB
             {
                 connection.Open();
 
-                var query = "CALL EliminarDiaFeriado(@idDia)";
+                var query = "CALL EliminarDiasFeriados(@idDia)";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@idDia", idDia);

@@ -469,7 +469,10 @@ namespace ProyectoBases
             button1.Text = "Editar";
             textBox1.Text = row[0];
             txf1.Text = row[1];
-            txf2.Text = row[2];
+            if (DateTime.TryParseExact(row[2], "MM/dd/yyyy", null, System.Globalization.DateTimeStyles.None, out DateTime sd2))
+            {
+                datePicker.Value = sd2;
+            }
             cb5.SelectedItem = row[3];
         }
 

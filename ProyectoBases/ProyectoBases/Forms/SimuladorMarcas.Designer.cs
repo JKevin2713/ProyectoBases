@@ -35,7 +35,6 @@
             this.dtp2 = new System.Windows.Forms.DateTimePicker();
             this.dtp3 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
-            this.cb1 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
@@ -46,6 +45,7 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.cb2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.SuspendLayout();
             // 
             // label1
@@ -96,7 +96,7 @@
             // 
             // dtp3
             // 
-            this.dtp3.Location = new System.Drawing.Point(116, 128);
+            this.dtp3.Location = new System.Drawing.Point(142, 128);
             this.dtp3.Name = "dtp3";
             this.dtp3.Size = new System.Drawing.Size(200, 27);
             this.dtp3.TabIndex = 6;
@@ -107,17 +107,9 @@
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(29, 128);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 20);
+            this.label3.Size = new System.Drawing.Size(109, 20);
             this.label3.TabIndex = 7;
-            this.label3.Text = "Hora";
-            // 
-            // cb1
-            // 
-            this.cb1.FormattingEnabled = true;
-            this.cb1.Location = new System.Drawing.Point(116, 175);
-            this.cb1.Name = "cb1";
-            this.cb1.Size = new System.Drawing.Size(200, 28);
-            this.cb1.TabIndex = 10;
+            this.label3.Text = "Hora Entrada";
             // 
             // label5
             // 
@@ -125,9 +117,10 @@
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.Location = new System.Drawing.Point(29, 178);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 20);
+            this.label5.Size = new System.Drawing.Size(95, 20);
             this.label5.TabIndex = 11;
-            this.label5.Text = "Horario";
+            this.label5.Text = "Hora salida";
+            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label4
             // 
@@ -209,9 +202,18 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(142, 178);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
+            this.dateTimePicker1.TabIndex = 21;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
             // SimuladorMarcas
             // 
             this.ClientSize = new System.Drawing.Size(721, 574);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cb2);
             this.Controls.Add(this.textBox3);
@@ -222,7 +224,6 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.cb1);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.dtp3);
             this.Controls.Add(this.dtp2);
@@ -232,6 +233,7 @@
             this.Controls.Add(this.label1);
             this.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name = "SimuladorMarcas";
+            this.Load += new System.EventHandler(this.SimuladorMarcas_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -246,7 +248,6 @@
         private System.Windows.Forms.DateTimePicker dtp2;
         private System.Windows.Forms.DateTimePicker dtp3;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.ComboBox cb1;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label6;
@@ -257,5 +258,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox cb2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }
