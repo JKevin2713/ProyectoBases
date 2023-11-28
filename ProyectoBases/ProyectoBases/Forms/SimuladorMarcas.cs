@@ -45,7 +45,7 @@ namespace ProyectoBases.Forms
 
         private void button1_Click(object sender, EventArgs e)
         {
-            String dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8;
+            String dato1, dato2, dato3, dato4, dato5, dato6, dato7, dato8, dato9;
             dato1 = dtp1.ToString();
             if (checkBox1.Checked)
             {
@@ -57,6 +57,7 @@ namespace ProyectoBases.Forms
             }
             dato3 = dtp3.ToString();
             dato4 = dateTimePicker1.ToString();
+            dato9 = textBox4.Text;
             dato5 = textBox1.Text;
             dato6 = textBox2.Text;
             dato7 = textBox3.Text;
@@ -85,6 +86,21 @@ namespace ProyectoBases.Forms
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox4_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
