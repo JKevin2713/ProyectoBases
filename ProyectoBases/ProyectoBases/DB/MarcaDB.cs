@@ -60,7 +60,7 @@ namespace DB
             }
         }
 
-        public List<String[]> ObtenerMarcasPorEmpleado(int idEmpleado, string connectionString)
+        public List<String[]> ObtenerMarcasPorEmpleado(int idEmpleado,DateTime FechaInicio,DateTime FechaFinal, string connectionString)
         {
             List<String[]> marcas = new List<String[]>();
 
@@ -68,10 +68,12 @@ namespace DB
             {
                 connection.Open();
 
-                var query = "SELECT id, fecha, entrada, salida FROM Marca WHERE empleado_id = @idEmpleado";
+                var query = "SELECT * FROM Marca WHERE empleado_id = @idEmpleado AND fecha >= @fechaInicio AND fecha <= @fechaFinal";
                 using (var command = new MySqlCommand(query, connection))
                 {
                     command.Parameters.AddWithValue("@idEmpleado", idEmpleado);
+                    command.Parameters.AddWithValue("@fechaInicio", FechaInicio);
+                    command.Parameters.AddWithValue("@fechaFinal", FechaFinal);
 
                     using (var reader = command.ExecuteReader())
                     {

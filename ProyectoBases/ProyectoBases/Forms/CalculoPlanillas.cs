@@ -36,7 +36,7 @@ namespace ProyectoBases.Forms.Planta
 
         private void button1_Click(object sender, EventArgs e)
         {
-            DateTime fechaInicial = dtp1.Value;
+            DateTime fechaInicio = dtp1.Value;
             int IDcalendario = Convert.ToInt32(cb1.SelectedItem);
 
             //recuepera los datos de calendario
@@ -89,30 +89,89 @@ namespace ProyectoBases.Forms.Planta
             {
                 // Aquí puedes realizar el cálculo de la planilla para cada empleado
                 int idEmpleado = int.Parse(empleado[0]);
-                string nombre = empleado[1];
                 DateTime fechaIngreso = DateTime.Parse(empleado[2]);
                 DateTime fechaSalida = DateTime.Parse(empleado[3]);
-                int tipoEmpleadoId = int.Parse(empleado[4]);
-                int idCalendario = int.Parse(empleado[5]);
-                int departamento = int.Parse(empleado[6]);
-                int supervisor = int.Parse(empleado[7]);
-                int planta = int.Parse(empleado[8]);
 
-                // Supongamos que ya tienes la lista de marcas del empleado (List<String[]> marcas)
+                DateTime fechaFinal;
+
+                if (calendarioEspecifico.TipoPago == 1)
+                {
+                    fechaFinal = fechaInicio.AddDays(30);
+                }
+                else if(calendarioEspecifico.TipoPago == 2)
+                {
+                    fechaFinal = fechaInicio.AddDays(15);
+                }
+                else
+                {
+                    fechaFinal = fechaInicio.AddDays(7);
+                }
+
                 MarcaDB marcaDB = new MarcaDB();
-                List<String[]> marcas = marcaDB.ObtenerMarcasPorEmpleado(idEmpleado, connection);
+                List<String[]> marcas = marcaDB.ObtenerMarcasPorEmpleado(idEmpleado, fechaInicio, fechaFinal, connection);
+                DateTime fechaActual = fechaInicio;
+                Planillas planillas = new Planillas();
+
+                planillas.IdEmpleado = int.Parse(empleado[0]);
+                planillas.Estado = true;
+                planillas.IdPlanta = int.Parse(empleado[8]);
+
+                decimal SalarioBruto = 0;
+                decimal SalarioNeto = 0;
+                decimal Porcentaje = 0;
 
                 foreach (String[] marca in marcas)
                 {
-                    // Aquí puedes trabajar con la información de cada marca del empleado
-                    int idMarca = int.Parse(marca[0]);
-                    DateTime fecha = DateTime.Parse(marca[1]);
-                    // Otros datos de la marca...
 
-                    // Realiza el cálculo de la planilla para esta marca específica
+                    DateTime horaEntrada = DateTime.Parse(marca[3]);  // Cambia la posición según la estructura de tus datos
+                    DateTime horaSalida = DateTime.Parse(marca[4]);    // Cambia la posición según la estructura de tus datos
+
+                    // Calcula la diferencia de tiempo
+                    TimeSpan diferenciaDeTiempo = horaSalida - horaEntrada;
+
+                    // Obtiene el número total de horas
+                    double horasTrabajadas = diferenciaDeTiempo.TotalHours;
+
+                    Console.WriteLine(horasTrabajadas.ToString()); 
+
+                    if (fechaIngreso >= fechaActual && fechaActual >= fechaSalida)
+                    {
+                        Console.WriteLine($"El empleado{int.Parse(empleado[0])} no habia ingresa o no seguia trabajando en la fecha: {fechaActual.ToShortDateString()}");
+                    }
+                    else if(EsPagoEspecialExtra(fechaActual, feriadosEspecificos))
+                    {
+                        SalarioBruto = SalarioBruto + ((decimal)horasTrabajadas * calendarioEspecifico.PagoHoraExtra);
+                    }
+                    else if (EsPagoEspecialDoble(fechaActual, feriadosEspecificos))
+                    {
+                        SalarioBruto = SalarioBruto + ((decimal)horasTrabajadas * calendarioEspecifico.PagoHoraDoble);
+                    }
+                    else
+                    {
+                        SalarioBruto = SalarioBruto + ((decimal)horasTrabajadas * calendarioEspecifico.PagoHora);
+                    }
+                    fechaActual = fechaActual.AddDays(1);
                 }
+
+                Porcentaje = SalarioBruto * (decimal)0.0978;
+                SalarioNeto = SalarioBruto - Porcentaje;
+
+                planillas.SalarioBruto = SalarioBruto;
+                planillas.SalarioNeto = SalarioNeto;
+                planillas.PorcentajeObligaciones = Porcentaje;
+
+                PlanillasDB planillasDB = new PlanillasDB();
+                planillasDB.InsertarPlanilla(planillas, connection);
             }
 
+        }
+        private bool EsPagoEspecialExtra(DateTime fecha, List<DiasFeriados> feriados)
+        {
+            return feriados.Any(feriado => feriado.Fecha.Date == fecha.Date && feriado.Etiqueta == "Extra");
+        }
+        private bool EsPagoEspecialDoble(DateTime fecha, List<DiasFeriados> feriados)
+        {
+            return feriados.Any(feriado => feriado.Fecha.Date == fecha.Date && feriado.Etiqueta == "Doble");
         }
 
         private void CalculoPlanillas_Load(object sender, EventArgs e)
