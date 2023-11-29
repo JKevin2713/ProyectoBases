@@ -2,6 +2,7 @@
 using MySql.Data.MySqlClient;
 using Model;
 using System.Collections.Generic;
+using System.Text.RegularExpressions;
 
 namespace DB
 {
@@ -23,6 +24,37 @@ namespace DB
                     command.Parameters.AddWithValue("@entrada", marca.Entrada);
                     command.Parameters.AddWithValue("@salida", marca.Salida);
                     command.ExecuteNonQuery();
+                }
+            }
+        }
+
+        public bool MarcaExistente(int empleadoId, DateTime fecha, String connectionString)
+        {
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+
+                connection.Open();
+                var query = "SELECT COUNT(*) FROM Marca WHERE empleado_id = @empleadoId AND fecha = @fecha";
+
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@empleadoId", empleadoId);
+                    command.Parameters.AddWithValue("@fecha", fecha.ToString("yyyy-MM-dd"));
+                    try
+                    {
+                        int count = Convert.ToInt32(command.ExecuteScalar());
+                        return count > 0;
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error al verificar la existencia de la marca: {ex.Message}");
+                        return false;
+                    }
+                    finally
+                    {
+                        connection.Close();
+                    }
                 }
             }
         }

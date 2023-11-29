@@ -1,5 +1,6 @@
 ﻿using DB;
 using Model;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -121,7 +122,7 @@ namespace ProyectoBases.Forms
             idEmpleado = textBox4.Text;
             Calendario = cb2.SelectedItem.ToString();
 
-            horaInicio = cb1.SelectedIndex * 10000 + cb2.SelectedIndex * 100;
+            horaInicio = cb1.SelectedIndex * 10000 + cb5.SelectedIndex * 100;
             horaFin = cb3.SelectedIndex * 10000 + cb4.SelectedIndex * 100;
 
             EmpleadoDB empleadoDB = new EmpleadoDB();
@@ -210,6 +211,13 @@ namespace ProyectoBases.Forms
 
             CalendarioLaboral calendarioEspecifico = Calenda.FirstOrDefault(c => c.IdCalendario == int.Parse(Calendario));
 
+            if (calendarioEspecifico.HoraInicio > horaInicio || calendarioEspecifico.HoraFinal < horaFin)
+            {
+                // Aquí puedes realizar las acciones necesarias para los días fuera de las horas laborales
+                Console.WriteLine($"No se debe marcar en las horas Ingresadas");
+                return;
+            }
+
             for (int i = 0; i <= numeroDias; i++)
             {
                 DateTime fechaActual = fechaInicio.AddDays(i);
@@ -222,63 +230,60 @@ namespace ProyectoBases.Forms
                 }
                 else
                 {
+                    // Generar un número aleatorio entre 0 y 1 para cada probabilidad
+                    double randomAusentismo = random.NextDouble();
+                    double randomOmision = random.NextDouble();
+                    double randomTardia = random.NextDouble();
+                    int minutosTardanza = 0;
 
-                    if (calendarioEspecifico.HoraInicio <= horaInicio && calendarioEspecifico.HoraFinal >= horaFin)
+                    // Verificar si se cumple la probabilidad de ausentismo
+                    bool ausentismo = randomAusentismo < probAusentismo;
+
+                    // Verificar si se cumple la probabilidad de omisión
+                    bool omision = randomOmision < probOmision;
+
+                    if(omision || ausentismo)
                     {
+                        Console.WriteLine($"Obtuvo una Ausencia o Omision");
+                        continue;
+                    }
 
-                        // Generar un número aleatorio entre 0 y 1 para cada probabilidad
-                        double randomAusentismo = random.NextDouble();
-                        double randomOmision = random.NextDouble();
-                        double randomTardia = random.NextDouble();
-                        int minutosTardanza = 0;
+                     // Verificar si se cumple la probabilidad de tardía
+                     bool tardia = randomTardia < probTardia;
 
-                        // Verificar si se cumple la probabilidad de ausentismo
-                        bool ausentismo = randomAusentismo < probAusentismo;
+                    Marca marca = new Marca();
+                    marca.EmpleadoId = id;
+                    marca.Fecha = fechaActual;
+                    marca.Salida = horaFin;
 
-                        // Verificar si se cumple la probabilidad de omisión
-                        bool omision = randomOmision < probOmision;
+                    if (tardia)
+                    {
+                        // Sumar entre 1 minutos y 59 minutos a la hora de inicio
+                        minutosTardanza = random.Next(01, 59);
+                        Console.WriteLine($"Obtuvo una llegada Tardia de {minutosTardanza} minutos");
+                    }
 
-                        if(omision || ausentismo)
-                        {
-                            Console.WriteLine($"Obtuvo una Ausencia o Omision");
-                            continue;
-                        }
+                    marca.Entrada = horaInicio + (minutosTardanza * 100);
 
-                        // Verificar si se cumple la probabilidad de tardía
-                        bool tardia = randomTardia < probTardia;
+                    MarcaDB marcaDB = new MarcaDB();
 
-                        Marca marca = new Marca();
-                        marca.EmpleadoId = id;
-                        marca.Fecha = fechaActual;
-                        marca.Salida = horaFin;
+                    if (marcaDB.MarcaExistente(marca.EmpleadoId, marca.Fecha, connection))
+                    {
+                        Console.WriteLine("Ya existe una marca para este empleado en la fecha especificada.");
+                        continue;
+                    }
 
-                        if (tardia)
-                        {
-                            // Sumar entre 1 minutos y 59 minutos a la hora de inicio
-                            minutosTardanza = random.Next(0100, 5900);
-                            Console.WriteLine($"Obtuvo una llegada Tardia de {minutosTardanza/100} minutos");
-                            marca.Entrada = horaInicio + minutosTardanza;
-                        }
-                        else
-                        {
-                            marca.Entrada = horaInicio;
-                        }
-
-                        MarcaDB marcaDB = new MarcaDB();
+                    if (checkBox2.Checked)
+                    {
                         marcaDB.InsertarMarca(marca, connection);
+                    }
 
-                        Console.WriteLine($"Puede marcar en la fecha: {fechaActual.ToShortDateString()} a la hora: {fechaActual.ToShortTimeString()}");
-                    }
-                    else
-                    {
-                        // Aquí puedes realizar las acciones necesarias para los días fuera de las horas laborales
-                        Console.WriteLine($"No se debe marcar en la fecha: {fechaActual.ToShortDateString()}");
-                    }
+                    Console.WriteLine($"Puede marcar en la fecha: {fechaActual.ToShortDateString()} a la hora: {marca.Entrada}");
+                    
                 }
             }
-
         }
-
+        
         private int ObtenerNumeroDias(DateTime fechaInicio, DateTime fechaFinal)
         {
             TimeSpan diferencia = fechaFinal - fechaInicio;

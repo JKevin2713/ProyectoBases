@@ -46,6 +46,8 @@
             this.button1 = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
+            this.label10 = new System.Windows.Forms.Label();
+            this.checkBox2 = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -149,7 +151,7 @@
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(29, 444);
+            this.label8.Location = new System.Drawing.Point(29, 441);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(89, 20);
             this.label8.TabIndex = 15;
@@ -180,7 +182,7 @@
             // cb2
             // 
             this.cb2.FormattingEnabled = true;
-            this.cb2.Location = new System.Drawing.Point(265, 441);
+            this.cb2.Location = new System.Drawing.Point(265, 438);
             this.cb2.Name = "cb2";
             this.cb2.Size = new System.Drawing.Size(121, 28);
             this.cb2.TabIndex = 19;
@@ -188,7 +190,7 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(290, 509);
+            this.button1.Location = new System.Drawing.Point(290, 536);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(129, 44);
             this.button1.TabIndex = 20;
@@ -215,9 +217,31 @@
             this.textBox4.TabIndex = 23;
             this.textBox4.TextChanged += new System.EventHandler(this.textBox4_TextChanged);
             // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(29, 489);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(91, 20);
+            this.label10.TabIndex = 24;
+            this.label10.Text = "Modo Final";
+            // 
+            // checkBox2
+            // 
+            this.checkBox2.AutoSize = true;
+            this.checkBox2.Location = new System.Drawing.Point(265, 485);
+            this.checkBox2.Name = "checkBox2";
+            this.checkBox2.Size = new System.Drawing.Size(113, 24);
+            this.checkBox2.TabIndex = 25;
+            this.checkBox2.Text = "Modo Final";
+            this.checkBox2.UseVisualStyleBackColor = true;
+            // 
             // SimuladorMarcas
             // 
-            this.ClientSize = new System.Drawing.Size(721, 574);
+            this.ClientSize = new System.Drawing.Size(721, 607);
+            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.label10);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.button1);
@@ -264,5 +288,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.CheckBox checkBox2;
     }
 }
