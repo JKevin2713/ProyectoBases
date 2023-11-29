@@ -1,0 +1,15 @@
+PAGO DE PLANILLA
+=================
+
+ID Pago: 5
+ID Empleado: 3
+Empleado: Juan Perez
+ID Calendario: 2
+Calendario: Calendario 1
+Departamento: Recursos Humanos
+Fecha de Ingreso: 1/1/2023 00:00:00
+Fecha de Salida: 31/12/2023 00:00:00
+Hora de Inicio: 8
+Hora Final: 17
+Planta: La Romana
+

@@ -1,0 +1,314 @@
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe.config
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.AssemblyReference.cache
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.SuggestedBindingRedirects.cache
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Properties.Resources.resources
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.GenerateResource.cache
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CoreCompileInputs.cache
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.exe
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Inico.resources
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\ZstdSharp.dll
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.pdb
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\wEDOw\source\repos\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CopyComplete
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe.config
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ZstdSharp.dll
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.pdb
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.AssemblyReference.cache
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.SuggestedBindingRedirects.cache
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Inico.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Properties.Resources.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.GenerateResource.cache
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CoreCompileInputs.cache
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CopyComplete
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.exe
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.MarcasCRUD.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.QueryPlantas.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.SimuladorMarcas.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PantallaTabla.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PantallaCRUD.resources
+C:\Users\wEDOw\Documents\GitHub\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Plantas.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe.config
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ZstdSharp.dll
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.pdb
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.AssemblyReference.cache
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.SuggestedBindingRedirects.cache
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.MarcasCRUD.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.QueryPlantas.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.SimuladorMarcas.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PantallaTabla.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PantallaCRUD.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Inico.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Plantas.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Properties.Resources.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.GenerateResource.cache
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CoreCompileInputs.cache
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CopyComplete
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.exe
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Corporacion.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.EmpleadosTabla.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.ModificarEmpleado.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PagoPlanillas.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PlanillasCanceladas.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.Corporacion.QueryCorporacion.resources
+C:\Users\wEDOw\Documents\Downloads\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.RegistroEmpleado.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe.config
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.pdb
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\ZstdSharp.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.pdb
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.AssemblyReference.cache
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Corporacion.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.EmpleadosTabla.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.ModificarEmpleado.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PagoPlanillas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PlanillasCanceladas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.Corporacion.QueryCorporacion.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.RegistroEmpleado.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.MarcasCRUD.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.QueryPlantas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.SimuladorMarcas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PantallaTabla.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PantallaCRUD.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Inico.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Plantas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Properties.Resources.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.GenerateResource.cache
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CoreCompileInputs.cache
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CopyComplete
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.exe
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.pdb
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe.config
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.pdb
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\ZstdSharp.dll
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.pdb
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.AssemblyReference.cache
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Corporacion.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.EmpleadosTabla.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.ModificarEmpleado.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PagoPlanillas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PlanillasCanceladas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.Corporacion.QueryCorporacion.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.RegistroEmpleado.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.MarcasCRUD.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.QueryPlantas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.SimuladorMarcas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PantallaTabla.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PantallaCRUD.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Inico.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Plantas.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Properties.Resources.resources
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.GenerateResource.cache
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CoreCompileInputs.cache
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CopyComplete
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.exe
+C:\Users\aleja\Downloads\ProyectoBases\ProyectoBases-Chris (2)\ProyectoBases-Chris\ProyectoBases1\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe.config
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.exe
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ProyectoBases.pdb
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Configuration.ConfigurationManager.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\ZstdSharp.dll
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\BouncyCastle.Cryptography.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.pdb
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Google.Protobuf.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Compression.LZ4.Streams.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\K4os.Hash.xxHash.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\MySql.Data.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Buffers.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Diagnostics.DiagnosticSource.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.IO.Pipelines.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Memory.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.AssemblyReference.cache
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.SuggestedBindingRedirects.cache
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Corporacion.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.EmpleadosTabla.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.ModificarEmpleado.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PagoPlanillas.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PlanillasCanceladas.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.Corporacion.QueryCorporacion.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.RegistroEmpleado.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.MarcasCRUD.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.QueryPlantas.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.SimuladorMarcas.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Forms.PantallaTabla.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.PantallaCRUD.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Inico.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Plantas.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.Properties.Resources.resources
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.GenerateResource.cache
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CoreCompileInputs.cache
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.csproj.CopyComplete
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.exe
+C:\Users\wEDOw\Documents\Downloads\Corp2\Corp\ProyectoBases\ProyectoBases\ProyectoBases\obj\Debug\ProyectoBases.pdb
