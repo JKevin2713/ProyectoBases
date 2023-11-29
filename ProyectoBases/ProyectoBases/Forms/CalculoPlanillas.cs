@@ -110,7 +110,6 @@ namespace ProyectoBases.Forms.Planta
                     // Otros datos de la marca...
 
                     // Realiza el cálculo de la planilla para esta marca específica
-                    CalcularPlanillaPorMarca(idEmpleado, idMarca, fecha, /* Otros parámetros que necesites */);
                 }
             }
 
