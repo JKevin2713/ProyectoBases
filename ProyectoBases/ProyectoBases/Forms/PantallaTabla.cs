@@ -195,13 +195,15 @@ namespace ProyectoBases.Forms
                     a.Show();
                     break;
                 case "Planillas":
-                    // code block
+                    //aqui va el generar planillas
                     break;
                 default:
                     // code block
                     break;
             }
         }
+
+
 
         private void boton2_Click(object sender, EventArgs e)
         {
