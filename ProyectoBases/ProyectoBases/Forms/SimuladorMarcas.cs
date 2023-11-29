@@ -223,7 +223,7 @@ namespace ProyectoBases.Forms
                 DateTime fechaActual = fechaInicio.AddDays(i);
 
                 // Verificar si es un día feriado con etiqueta NULL o no laboral
-                if (EsDiaFeriado(fechaActual, fechasFeriadas) || !EsDiaLaboral(fechaActual, DiasLaborales, int.Parse(Calendario)))
+                if (EsDiaFeriado(fechaActual, fechasFeriadas) || !(EsDiaLaboral(fechaActual, DiasLaborales, int.Parse(Calendario)) || EsPagoEspecial(fechaActual, fechasFeriadas)))
                 {
                     // Aquí puedes realizar las acciones necesarias para los días que no deben marcarse
                     Console.WriteLine($"No se debe marcar en la fecha: {fechaActual.ToShortDateString()}");
@@ -292,7 +292,12 @@ namespace ProyectoBases.Forms
 
         private bool EsDiaFeriado(DateTime fecha, List<DiasFeriados> feriados)
         {
-            return feriados.Any(feriado => feriado.Fecha.Date == fecha.Date && feriado.Etiqueta == "NULL");
+            return feriados.Any(feriado => feriado.Fecha.Date == fecha.Date && feriado.Etiqueta == "Null");
+        }
+
+        private bool EsPagoEspecial(DateTime fecha, List<DiasFeriados> feriados)
+        {
+            return feriados.Any(feriado => feriado.Fecha.Date == fecha.Date && (feriado.Etiqueta == "Extra" || feriado.Etiqueta == "Doble"));
         }
 
         private bool EsDiaLaboral(DateTime fecha, List<DiasLaborales> laborales, int idCalendario)

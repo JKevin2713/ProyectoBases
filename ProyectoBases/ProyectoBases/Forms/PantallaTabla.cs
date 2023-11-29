@@ -9,6 +9,7 @@ using System.Text;
 using System.Windows.Forms;
 using DB;
 using Model;
+using ProyectoBases.Forms.Planta;
 
 namespace ProyectoBases.Forms
 {
@@ -195,7 +196,8 @@ namespace ProyectoBases.Forms
                     a.Show();
                     break;
                 case "Planillas":
-                    //aqui va el generar planillas
+                    CalculoPlanillas calculoPlanillas = new CalculoPlanillas(Connection);
+                    calculoPlanillas.Show();
                     break;
                 default:
                     // code block

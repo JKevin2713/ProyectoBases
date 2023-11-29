@@ -3,6 +3,7 @@ using MySql.Data.MySqlClient;
 using Model;
 using System.Collections.Generic;
 using System.Text.RegularExpressions;
+using System.Linq;
 
 namespace DB
 {
@@ -57,6 +58,41 @@ namespace DB
                     }
                 }
             }
+        }
+
+        public List<String[]> ObtenerMarcasPorEmpleado(int idEmpleado, string connectionString)
+        {
+            List<String[]> marcas = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "SELECT id, fecha, entrada, salida FROM Marca WHERE empleado_id = @idEmpleado";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idEmpleado", idEmpleado);
+
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            String[] marca = new String[]
+                            {
+                        reader["id"].ToString(),
+                        reader["empleado_id"].ToString(),
+                        reader["fecha"].ToString(),
+                        reader["entrada"].ToString(),
+                        reader["salida"].ToString()
+                            };
+
+                            marcas.Add(marca);
+                        }
+                    }
+                }
+            }
+
+            return marcas;
         }
 
         public void ActualizarMarca(Marca marca, String connectionString)

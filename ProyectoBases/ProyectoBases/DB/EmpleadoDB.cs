@@ -74,6 +74,49 @@ namespace DB
             return calendarios;
         }
 
+        public List<String[]> VerEmpleadoPorCalendario(String connectionString, int idCalendario)
+        {
+            List<String[]> empleados = new List<String[]>();
+
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL VerEmpleado()";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            int idCalendarioEmpleado = Convert.ToInt32(reader["id_calendario"]);
+
+                            if (idCalendarioEmpleado == idCalendario)
+                            {
+                                String[] empleado = new String[]
+                                {
+                            reader["idEmpleado"].ToString(),
+                            reader["nombre"].ToString(),
+                            reader["fecha_ingreso"].ToString(),
+                            reader["fecha_salida"].ToString(),
+                            reader["tipo_empleado_id"].ToString(),
+                            reader["id_calendario"].ToString(),
+                            reader["departamento"].ToString(),
+                            reader["supervisor"].ToString(),
+                            reader["planta"].ToString()
+                                };
+
+                                empleados.Add(empleado);
+                            }
+                        }
+                    }
+                }
+            }
+
+            return empleados;
+        }
+
+
         public int BuscarIdEmpleado(String empleado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))

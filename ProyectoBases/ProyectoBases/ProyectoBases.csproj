@@ -107,7 +107,9 @@
     <Compile Include="DB\PlanillasDB.cs" />
     <Compile Include="DB\TipoEmpleadoBD.cs" />
     <Compile Include="DB\TipoPago.cs" />
-    <Compile Include="Forms\CalculoPlanillas.cs" />
+    <Compile Include="Forms\CalculoPlanillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\CalculoPlanillas.designer.cs">
       <DependentUpon>CalculoPlanillas.cs</DependentUpon>
     </Compile>
