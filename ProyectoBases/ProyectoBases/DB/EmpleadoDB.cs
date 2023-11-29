@@ -73,6 +73,28 @@ namespace DB
 
             return calendarios;
         }
+
+        public int BuscarIdEmpleado(String empleado, String connectionString)
+        {
+            using (var connection = new MySqlConnection(connectionString))
+            {
+                connection.Open();
+
+                var query = "CALL BuscarIdEmpleado(@idEmpleado)";
+                using (var command = new MySqlCommand(query, connection))
+                {
+                    command.Parameters.AddWithValue("@idEmpleado", empleado);
+                    using (var reader = command.ExecuteReader())
+                    {
+                        while (reader.Read())
+                        {
+                            return Convert.ToInt32(reader["idEmpleado"]);
+                        }
+                        return 0;
+                    }
+                }
+            }
+        }
         public void ActualizarEmpleado(Empleado empleado, String connectionString)
         {
             using (var connection = new MySqlConnection(connectionString))

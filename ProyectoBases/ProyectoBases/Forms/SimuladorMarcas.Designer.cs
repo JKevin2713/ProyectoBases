@@ -33,7 +33,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.dtp2 = new System.Windows.Forms.DateTimePicker();
-            this.dtp3 = new System.Windows.Forms.DateTimePicker();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -45,7 +44,6 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.cb2 = new System.Windows.Forms.ComboBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.label9 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -95,13 +93,6 @@
             this.dtp2.Name = "dtp2";
             this.dtp2.Size = new System.Drawing.Size(200, 27);
             this.dtp2.TabIndex = 5;
-            // 
-            // dtp3
-            // 
-            this.dtp3.Location = new System.Drawing.Point(142, 128);
-            this.dtp3.Name = "dtp3";
-            this.dtp3.Size = new System.Drawing.Size(200, 27);
-            this.dtp3.TabIndex = 6;
             // 
             // label3
             // 
@@ -205,14 +196,6 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(142, 178);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 27);
-            this.dateTimePicker1.TabIndex = 21;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
-            // 
             // label9
             // 
             this.label9.AutoSize = true;
@@ -237,7 +220,6 @@
             this.ClientSize = new System.Drawing.Size(721, 574);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.label9);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cb2);
             this.Controls.Add(this.textBox3);
@@ -249,7 +231,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.dtp3);
             this.Controls.Add(this.dtp2);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
@@ -270,7 +251,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.DateTimePicker dtp2;
-        private System.Windows.Forms.DateTimePicker dtp3;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
@@ -282,7 +262,6 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.ComboBox cb2;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.TextBox textBox4;
     }

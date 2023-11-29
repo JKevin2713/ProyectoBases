@@ -826,6 +826,11 @@ namespace ProyectoBases
        
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
         public void editar_empleado()
         {
             bool error = false;
